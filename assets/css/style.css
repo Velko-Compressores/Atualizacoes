@@ -679,157 +679,249 @@ body{
    CONTACT SECTION COMPLETO E RESPONSIVO
 ========================= */
 
-/* ========================= CONTACT SECTION — layout responsivo com padding ========================= */
+/* Base: garantir que padding/bordas não estourem o box */
+.contact, .contact * {
+  box-sizing: border-box;
+}
+
+/* Container da seção */
 .contact {
-    padding: 5rem 7%; /* NOVO: padding envolta */
+  padding: 4rem 7%;
 }
 
 .contact .heading {
-    font-size: clamp(2.6rem, 2vw + 2rem, 3.5rem);
-    text-align: center;
-    color: var(--cor-azul1);
-    margin-bottom: 2rem;
+  font-size: clamp(2rem, 1.4vw + 1.5rem, 2.8rem);
+  text-align: center;
+  color: var(--cor-azul1);
+  margin-bottom: 2rem;
 }
-.contact .heading span {
-    color: var(--cor-dourado);
-}
+.contact .heading span { color: var(--cor-dourado); }
 
-/* Layout com Grid para garantir alturas iguais */
+/* ===========================
+   Grid principal
+=========================== */
 .contact .row {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* duas colunas em telas grandes */
-    gap: 1rem;
-    align-items: stretch;
-    background: var(--cor-branco);
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
-    min-height: 450px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;   /* duas colunas no desktop */
+  gap: 1rem;
+  align-items: stretch;
+  background: var(--cor-branco);
+  padding: 1.8rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
 }
 
-/* Mapa e formulário ocupam toda a altura */
+/* Mapa e Form: mesma altura SEMPRE */
 .contact .row .map,
 .contact .row form {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: clamp(360px, 52vh, 540px);
+  border: 1px solid #e6e6ea5b;
+  border-radius: 10px;
+  background: #eef2f7;
 }
 
-/* Mapa */
+/* ===========================
+   Mapa
+=========================== */
 .contact .row .map {
-    border: 1px solid #e6e6ea5b;
-    border-radius: 10px;
-    overflow: hidden;
-    height: 100% !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.contact .row .map iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 0;
 }
 
-/* Formulário */
+/* ===========================
+   Formulário
+=========================== */
 .contact .row form {
-    text-align: center;
-    padding: 3rem 2rem;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #e6e6ea5b;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-    overflow: visible;
+  position: relative;                 /* permite sticky interno */
+  display: flex;
+  flex-direction: column;
+  padding: clamp(0.9rem, 1vw + 0.6rem, 1.3rem);
+  background: var(--cor-branco);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  overflow: hidden;                    /* sem rolagem e sem “sair” do box */
+  gap: clamp(0.4rem, 0.6vw, 0.7rem);   /* espaçamento entre elementos */
 }
 
-/* Título do formulário */
 .contact .row form h3 {
-    font-size: clamp(1.8rem, 1vw + 1.2rem, 2.5rem);
-    color: var(--cor-azul1);
-    margin-bottom: 1rem;
-    font-weight: 800;
+  font-size: clamp(1.25rem, 0.9vw + 1rem, 1.7rem);
+  color: var(--cor-azul1);
+  margin-bottom: 0;                    /* controlado via gap */
+  font-weight: 800;
 }
 
-/* Inputs */
+/* ===========================
+   Inputs (compactos)
+=========================== */
 .contact .row form .inputBox {
-    display: flex;
-    align-items: center;
-    margin: 1.2rem 0;
-    background: var(--cor-branco);
-    border: 1px solid #e6e6ea5b;
-    border-radius: 10px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
-    transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  margin: 0;                            /* usaremos gap do form */
+  background: var(--cor-branco);
+  border: 1px solid #e6e6ea5b;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  min-height: clamp(40px, 4.5vh, 52px); /* altura mínima reduzida */
 }
+
 .contact .row form .inputBox span {
-    color: var(--cor-azul1);
-    font-size: 1.6rem;
-    padding-left: 1.2rem;
-    padding-right: 0.6rem;
+  color: var(--cor-azul1);
+  font-size: clamp(1rem, 0.6vw + 0.9rem, 1.3rem);
+  padding-left: clamp(0.55rem, 0.6vw, 0.9rem);
+  padding-right: clamp(0.3rem, 0.5vw, 0.6rem);
 }
+
 .contact .row form .inputBox input,
 .contact .row form .inputBox textarea {
-    width: 100%;
-    padding: 1.1rem 1.3rem;
-    font-size: clamp(1.1rem, 0.7vw + 0.9rem, 1.4rem);
-    color: var(--cor-azul1);
-    background: none;
-    border: none;
-    outline: none;
+  width: 100%;
+  padding: clamp(0.5rem, 0.6vw + 0.35rem, 0.85rem) clamp(0.7rem, 0.8vw + 0.5rem, 1rem);
+  font-size: clamp(0.85rem, 0.6vw + 0.8rem, 1.05rem);
+  line-height: 1.2;
+  color: var(--cor-azul1);
+  background: none;
+  border: none;
+  outline: none;
 }
 
+/* Textarea controlada para não “empurrar” o botão */
+.contact .row form .inputBox textarea {
+  resize: vertical; /* permite reduzir manualmente */
+  min-height: clamp(70px, 8vh, 95px);
+  max-height: clamp(95px, 14vh, 130px);
+}
+
+/* ===========================
+   Botão (sempre dentro do form)
+=========================== */
 .contact .row form .btn {
-    margin-top: auto;
-    align-self: center;
-    display: inline-block;
-    padding: 1.1rem 3rem;
-    font-size: 2.1rem;
-    font-weight: 700;
-    border-radius: 5px;
-    color: var(--cor-branco);
-    background: var(--cor-azul1);
-    cursor: pointer;
-    border: none;
-    transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  /* mantém visualmente no final, mas garante que não saia do box */
+  position: sticky;
+  bottom: clamp(0.8rem, 1vw, 1.2rem);   /* ancorado ao “fundo interno” */
+  margin-top: auto;
+  align-self: center;
+  display: inline-block;
+  padding: clamp(0.55rem, 0.7vw, 0.85rem) clamp(1.2rem, 1.6vw, 1.8rem);
+  font-size: clamp(1rem, 0.9vw + 0.85rem, 1.3rem);
+  font-weight: 700;
+  border-radius: 6px;
+  color: var(--cor-branco);
+  background: var(--cor-azul1);
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 .contact .row form .btn:hover {
-    background-color: var(--cor-azul2);
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.09);
+  background-color: var(--cor-azul2);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.09);
+}
+.contact .row form .btn:active { transform: translateY(1px); }
+
+/* Foco acessível */
+.contact .row form .inputBox:focus-within {
+  border-color: rgba(42, 75, 150, 0.5);
+  box-shadow: 0 8px 20px rgba(42, 75, 150, 0.12);
 }
 
-/* ===== Responsividade ===== */
-/* <= 700px: mapa e form ocupam 50% cada */
-@media (max-width: 700px) {
-    .contact .heading {
-        font-size: 2.3rem;
-        margin-bottom: 1rem;
-    }
-    .contact .row {
-        grid-template-columns: 1fr;
-        grid-template-rows: 50vh 50vh; /* mapa e form dividem a tela */
-        gap: 0.75rem;
-        padding: 0;
-        min-height: 100vh;
-        box-shadow: none;
-        background: transparent;
-    }
-    .contact .row .map,
-    .contact .row form {
-        height: 100%;
-        width: 100%;
-        border-radius: 0;
-    }
-    .contact .row form {
-        padding: 1.2rem 1rem;
-        background: var(--cor-branco);
-    }
-    .contact .row form h3 {
-        font-size: 1.8rem;
-        margin-bottom: 0.6rem;
-    }
-    .contact .row form .btn {
-        font-size: 1.6rem;
-        padding: 0.9rem 2rem;
-    }
+/* ===========================
+   Responsividade
+=========================== */
+
+/* <= 1300px: vira coluna única */
+@media (max-width: 1300px) {
+  .contact .row {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+    padding: 0;
+    box-shadow: none;
+    background: transparent;
+  }
+  .contact .row .map,
+  .contact .row form {
+    border-radius: 0;
+    height: clamp(320px, 48vh, 500px); /* mesma altura */
+  }
+  .contact .row .map iframe { width: 100%; height: 100%; object-fit: cover; }
+
+  /* Conteúdo ainda mais compacto para garantir espaço ao botão */
+  .contact .row form {
+    padding: clamp(0.8rem, 1vw + 0.5rem, 1.1rem);
+    gap: clamp(0.35rem, 0.5vw, 0.6rem);
+  }
+  .contact .row form h3 {
+    font-size: clamp(1.15rem, 0.85vw + 1rem, 1.5rem);
+  }
+  .contact .row form .inputBox {
+    min-height: clamp(38px, 4.2vh, 50px);
+  }
+  .contact .row form .inputBox input,
+  .contact .row form .inputBox textarea {
+    padding: clamp(0.45rem, 0.55vw + 0.3rem, 0.75rem) clamp(0.65rem, 0.75vw + 0.45rem, 0.95rem);
+    font-size: clamp(0.82rem, 0.55vw + 0.78rem, 1rem);
+  }
+  .contact .row form .inputBox textarea {
+    min-height: clamp(64px, 7.8vh, 90px);
+    max-height: clamp(90px, 13vh, 120px);
+  }
+  .contact .row form .btn {
+    font-size: clamp(0.95rem, 0.85vw + 0.82rem, 1.2rem);
+    padding: clamp(0.5rem, 0.65vw, 0.8rem) clamp(1.1rem, 1.4vw, 1.6rem);
+    bottom: clamp(0.7rem, 0.9vw, 1rem);
+  }
 }
+
+/* <= 700px: hiper-compacto */
+@media (max-width: 700px) {
+  .contact { padding: 2rem 5%; }
+  .contact .heading { font-size: 1.9rem; margin-bottom: 1rem; }
+
+  .contact .row .map,
+  .contact .row form {
+    height: clamp(300px, 46vh, 420px);
+  }
+  .contact .row form {
+    padding: clamp(0.7rem, 0.9vw + 0.45rem, 1rem);
+    gap: clamp(0.3rem, 0.45vw, 0.5rem);
+  }
+  .contact .row form h3 {
+    font-size: clamp(1.1rem, 0.8vw + 0.95rem, 1.35rem);
+  }
+  .contact .row form .inputBox {
+    min-height: clamp(36px, 4.1vh, 48px);
+  }
+  .contact .row form .inputBox input,
+  .contact .row form .inputBox textarea {
+    padding: clamp(0.42rem, 0.5vw + 0.28rem, 0.7rem) clamp(0.6rem, 0.7vw + 0.4rem, 0.9rem);
+    font-size: clamp(0.8rem, 0.5vw + 0.75rem, 0.95rem);
+  }
+  .contact .row form .inputBox textarea {
+    min-height: clamp(58px, 7.5vh, 85px);
+    max-height: clamp(85px, 12.5vh, 115px);
+  }
+  .contact .row form .btn {
+    font-size: clamp(0.9rem, 0.8vw + 0.8rem, 1.15rem);
+    padding: clamp(0.48rem, 0.6vw, 0.75rem) clamp(1rem, 1.25vw, 1.5rem);
+    bottom: clamp(0.6rem, 0.8vw, 0.9rem);
+  }
+}
+
+
 
 
 /* -- Final Footer Section  -- */
 
-
-/*===  Inicio Botão Flutuante do WhatsApp Section === */
+/* =========================
+   BOTÃO FLUANTE DO WHATSAPP SECTION COMPLETO E RESPONSIVO
+========================= */
 
 .whatsapp-float {
     position: fixed;
