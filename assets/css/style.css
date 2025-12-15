@@ -696,7 +696,7 @@ body{
   color: var(--cor-azul1);
   margin-bottom: 2rem;
 }
-.contact .heading span { color: var(--cor-dourado); }
+.contact .heading span { color: var(--cor-azul2); }
 
 .contact .row {
   display: grid;
