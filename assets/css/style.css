@@ -364,7 +364,7 @@ body{
         padding: 25px;
     }
     .about .row .content h3{
-        font-size: 2.3rem;
+        font-size: 1.9rem;
         color:var(--cor-azul2);
     }
     .about .row .content p{
@@ -378,12 +378,15 @@ body{
     .about{
         padding:3rem 7%;
     }
+    .about .heading{
+        font-size: 2.3rem;
+    }
     .about .row .image img{
         max-width: 80rem;
     }
 
     .about .row .content h3{
-        font-size: 2.3rem;
+        font-size: 1.5rem;
         color:var(--cor-azul2);
     }
     .about .row .content p{
