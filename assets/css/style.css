@@ -589,7 +589,7 @@ body{
   object-fit: cover;
 }
 
-.btn {
+.products .btn {
   margin-top: 2rem;
   display: inline-block;
   padding: 1.1rem 3rem;
@@ -600,7 +600,7 @@ body{
   background: var(--cor-azul1);
   cursor: pointer;
 }
-.btn:hover {
+.products .btn:hover {
   background-color: var(--cor-azul2);
 }
 
@@ -679,128 +679,152 @@ body{
    CONTACT SECTION COMPLETO E RESPONSIVO
 ========================= */
 
-.contact .row{
-    display: flex;
-    align-items: center;
-    background:var(--cor-branco);
-    flex-wrap: wrap;
-    gap:1rem;
-    padding: 25px;
+/* ========================= CONTACT SECTION — layout responsivo com padding ========================= */
+.contact {
+    padding: 5rem 7%; /* NOVO: padding envolta */
 }
 
-.contact .row .map{
-    flex:1 1 45rem;
-    width: 100%;
-    object-fit: cover;
-}
-
-.contact .row form{
-    flex:1 1 45rem;
-    padding:5rem 2rem;
+.contact .heading {
+    font-size: clamp(2.6rem, 2vw + 2rem, 3.5rem);
     text-align: center;
-}
-
-.contact .row form h3{
-    font-size: 2.5rem;
-    color:var(--cor-azul1)
-}
-
-.contact .row form .inputBox{
-    display: flex;
-    align-items: center;
-    margin-top: 2rem;
+    color: var(--cor-azul1);
     margin-bottom: 2rem;
-    background:var(--cor-branco);
-    border:.1rem solid var(--cor-dourado);
-    border-radius: 5px;
-    border: .07rem solid rgba(204, 204, 204, 0.1);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-
+}
+.contact .heading span {
+    color: var(--cor-dourado);
 }
 
-.contact .row form .inputBox span{
-    color:var(--cor-azul1);
-    font-size: 2rem;
-    padding-left: 2rem;
+/* Layout com Grid para garantir alturas iguais */
+.contact .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* duas colunas em telas grandes */
+    gap: 1rem;
+    align-items: stretch;
+    background: var(--cor-branco);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    min-height: 450px;
 }
 
-.contact .row form .inputBox input{
+/* Mapa e formulário ocupam toda a altura */
+.contact .row .map,
+.contact .row form {
     width: 100%;
-    padding:2rem;
-    font-size: 1.7rem;
-    color: var(--cor-azul1);
-    text-transform: none;
-    background:none;
+    height: 100%;
 }
 
-.contact .row form .inputBox textarea{
-    width: 100%;
-    padding:2rem;
-    font-size: 1.7rem;
-    color: var(--cor-azul1);
-    text-transform: none;
-    background:none;
+/* Mapa */
+.contact .row .map {
+    border: 1px solid #e6e6ea5b;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 100% !important;
 }
 
-/* -- Final Contact Section  -- */
-
-/* =========================
-   FOOTER SECTION COMPLETO E RESPONSIVO
-========================= */
-
-.footer{
-    background:var(--cor-branco);
+/* Formulário */
+.contact .row form {
     text-align: center;
-}
-
-.footer .share{
-    padding:1rem 0;
-}
-
-.footer .share a{
-    height: 5rem;
-    width: 5rem;
-    line-height: 5rem;
-    font-size: 2rem;
-    color:var(--cor-azul3);
-    border:.1rem solid var(--cor-azul3);
-    margin:.3rem;
-    border-radius: 50%;
-}
-
-.footer .share a:hover{
-    background-color: var(--cor-azul3);
-}
-
-.footer .links{
+    padding: 3rem 2rem;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding:2rem 0;
-    gap:1rem;
+    flex-direction: column;
+    border: 1px solid #e6e6ea5b;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    overflow: visible;
 }
 
-.footer .links a{
-    padding:.7rem 2rem;
-    color:var(--cor-azul2);
-    border:.1rem solid var(--cor-dourado);
-    font-size: 2rem;
+/* Título do formulário */
+.contact .row form h3 {
+    font-size: clamp(1.8rem, 1vw + 1.2rem, 2.5rem);
+    color: var(--cor-azul1);
+    margin-bottom: 1rem;
+    font-weight: 800;
 }
 
-.footer .links a:hover{
-    background:var(--main-color);
+/* Inputs */
+.contact .row form .inputBox {
+    display: flex;
+    align-items: center;
+    margin: 1.2rem 0;
+    background: var(--cor-branco);
+    border: 1px solid #e6e6ea5b;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+.contact .row form .inputBox span {
+    color: var(--cor-azul1);
+    font-size: 1.6rem;
+    padding-left: 1.2rem;
+    padding-right: 0.6rem;
+}
+.contact .row form .inputBox input,
+.contact .row form .inputBox textarea {
+    width: 100%;
+    padding: 1.1rem 1.3rem;
+    font-size: clamp(1.1rem, 0.7vw + 0.9rem, 1.4rem);
+    color: var(--cor-azul1);
+    background: none;
+    border: none;
+    outline: none;
 }
 
-.footer .credit{
-    font-size: 1.7rem;
-    color:var(--cor-azul2);
-    font-weight: lighter;
-    padding:1.5rem;
+.contact .row form .btn {
+    margin-top: auto;
+    align-self: center;
+    display: inline-block;
+    padding: 1.1rem 3rem;
+    font-size: 2.1rem;
+    font-weight: 700;
+    border-radius: 5px;
+    color: var(--cor-branco);
+    background: var(--cor-azul1);
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+.contact .row form .btn:hover {
+    background-color: var(--cor-azul2);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.09);
 }
 
-.footer .credit span{
-    color:var(--cor-azul2);
+/* ===== Responsividade ===== */
+/* <= 700px: mapa e form ocupam 50% cada */
+@media (max-width: 700px) {
+    .contact .heading {
+        font-size: 2.3rem;
+        margin-bottom: 1rem;
+    }
+    .contact .row {
+        grid-template-columns: 1fr;
+        grid-template-rows: 50vh 50vh; /* mapa e form dividem a tela */
+        gap: 0.75rem;
+        padding: 0;
+        min-height: 100vh;
+        box-shadow: none;
+        background: transparent;
+    }
+    .contact .row .map,
+    .contact .row form {
+        height: 100%;
+        width: 100%;
+        border-radius: 0;
+    }
+    .contact .row form {
+        padding: 1.2rem 1rem;
+        background: var(--cor-branco);
+    }
+    .contact .row form h3 {
+        font-size: 1.8rem;
+        margin-bottom: 0.6rem;
+    }
+    .contact .row form .btn {
+        font-size: 1.6rem;
+        padding: 0.9rem 2rem;
+    }
 }
+
 
 /* -- Final Footer Section  -- */
 
