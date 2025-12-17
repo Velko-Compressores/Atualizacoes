@@ -1,0 +1,559 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+
+:root{
+    --main-color:#d3ad7f;
+    --black:#13131a;
+    --bg:#7a6d6d;
+    --border:.1rem solid rgba(255,255,255,.3);
+
+    --cor-azul1:rgb(28, 54, 97);
+    --cor-azul2:rgb(70, 140, 188);
+    --cor-azul3:rgb(130, 206, 234);
+    --cor-azul4:rgb(13, 45, 67);
+    --cor-branco:rgb(255, 255, 255);
+    --cor-preto:rgb(0, 0, 0);
+    --cor-dourado:rgb(204, 204, 204);
+}
+
+*{
+    font-family: 'Play','Roboto', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    transition: .2s linear;
+}
+
+html::-webkit-scrollbar {
+    width: .8rem;
+}
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 5rem;
+}
+
+body{
+    background: var(--cor-branco);
+}
+
+.heading{
+    text-align: center;
+    color:var(--cor-azul1);
+    text-transform: uppercase;
+    font-size: 4rem;
+}
+
+.heading span{
+    color:var(--cor-azul2);
+    text-transform: uppercase;
+}
+
+.btn{
+    margin-top: 2rem;
+    display: inline-block;
+    padding: 1.1rem 3rem;
+    font-size: 2.1rem;
+    font-weight: 700;
+    border-radius: 5px;
+    color:var(--cor-branco);
+    background: var(--cor-azul1);
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: var(--cor-azul2);
+}
+
+/* =========================
+   HEADER COMPLETO E RESPONSIVO
+========================= */
+.header {
+    background-color: var(--cor-branco);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.1rem 5%;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    min-height: 7rem; /* garante espaço para o logo maior */
+}
+
+.header .logo img {
+    height: 5.5rem;   /* tamanho desejado no desktop */
+    width: auto;      /* mantém proporção */
+    flex-shrink: 0;   /* evita compressão pelo flex */
+}
+
+.header .navbar {
+    transition: right 0.3s ease;
+}
+
+.header .navbar.active {
+    right: 0;
+}
+
+.header .navbar ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.header .navbar ul li a {
+    font-weight: 700;
+    font-size: 1.9rem;
+    color: var(--cor-azul1);
+    text-decoration: none;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.header .navbar ul li a:hover {
+    color: var(--cor-azul2);
+    border-bottom: .1rem solid var(--cor-azul2);
+    padding-bottom: .3rem;
+}
+
+.header .icons button {
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    color: var(--cor-azul1);
+    cursor: pointer;
+    margin-left: 2rem;
+    transition: color 0.3s ease;
+}
+
+.header .icons button:hover {
+    color: var(--cor-azul2);
+}
+
+#menu-btn {
+    display: none;
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 1350px) {
+    .header .logo img {
+        height: 5.2rem; /* menor que o desktop para caber melhor */
+        width: auto;
+    }
+
+    .header .navbar {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background: #fff;
+        width: 30rem;
+        /* acompanha a altura do header */
+        height: calc(100vh - 7rem);
+        overflow: auto; /* garante scroll se necessário */
+    }
+
+    .header .navbar.active {
+        display: block;
+    }
+
+    .header .navbar ul {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    #menu-btn {
+        display: inline-block;
+    }
+}
+
+@media (max-width: 600px) {
+    .header .logo img {
+        height: 2.5rem; /* ligeiramente maior que 3rem, ajuste conforme necessidade */
+        width: auto;
+    }
+
+    .header .navbar {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background: #fff;
+        width: 15rem;
+        height: calc(100vh - 6rem); /* compatível com a altura do header em mobile */
+        overflow: auto;
+    }
+
+    .header .navbar.active {
+        display: block;
+    }
+
+    .header .icons button {
+        font-size: 1.5rem;
+    }
+}
+/* -- Final Header Section  -- */
+
+
+
+
+
+
+
+
+/* Products Section */
+.products-section {
+    padding: 80px 40px;
+    background: var(--dark);
+}
+
+.products-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.product-card {
+    background: var(--light);
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(10, 12, 9, 0.15);
+}
+
+.product-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--red);
+    color: var(--light);
+    padding: 5px 12px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 10;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.product-image {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+    background: #f0f0f0;
+}
+
+.product-img-primary,
+.product-img-secondary {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.product-img-primary {
+    opacity: 1;
+    z-index: 1;
+}
+
+.product-img-secondary {
+    opacity: 0;
+    z-index: 2;
+}
+
+.product-card:hover .product-img-primary {
+    opacity: 0;
+    transform: scale(1.1);
+}
+
+.product-card:hover .product-img-secondary {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.product-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(10, 12, 9, 0.8), transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 3;
+}
+
+.product-card:hover .product-overlay {
+    opacity: 1;
+}
+
+
+.quick-view-btn {
+    background: var(--yellow);
+    color: var(--dark);
+    border: none;
+    padding: 10px 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s;
+}
+
+.quick-view-btn:hover {
+    background: var(--light);
+    transform: translateY(-2px);
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--dark);
+    margin-bottom: 8px;
+    transition: color 0.3s;
+}
+
+.product-card:hover .product-title {
+    color: var(--red);
+}
+
+.product-price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.price-old {
+    font-size: 14px;
+    color: #999;
+    text-decoration: line-through;
+}
+
+.price-current {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--red);
+}
+
+.lazy-load-product {
+    filter: blur(5px);
+    transition: filter 0.4s ease;
+}
+
+.lazy-load-product.lazy-loaded {
+    filter: blur(0);
+}
+
+.product-image.loading {
+    background: linear-gradient(90deg,
+            #f0f0f0 25%,
+            #e0e0e0 50%,
+            #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   FOOTER SECTION COMPLETO E RESPONSIVO
+========================= */
+
+.footer {
+  width: 100%;
+  background: var(--cor-branco);
+  border-top: 1px solid #e6e6ea5b;
+  padding: clamp(1.6rem, 1.2vw + 1.2rem, 2.4rem) 7%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(0.8rem, 1vw, 1.4rem);
+}
+
+.footer .share {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.6rem, 1vw, 1rem);
+}
+
+.footer .share a {
+  width: clamp(36px, 3.2vw + 24px, 48px);
+  height: clamp(36px, 3.2vw + 24px, 48px);
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--cor-branco);
+  background: var(--cor-azul1);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+
+  font-size: clamp(1.3rem, 0.8vw + 1rem, 1.6rem);
+  text-decoration: none;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.footer .share a:hover {
+  background: var(--cor-azul2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.09);
+}
+
+.footer .share a:active {
+  transform: translateY(0);
+}
+
+.footer .share a:focus-visible {
+  outline: 3px solid rgba(42, 75, 150, 0.35);
+  outline-offset: 3px;
+}
+
+.footer .credit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.5rem, 0.6vw, 0.8rem);
+  color: var(--cor-azul1);
+  font-size: clamp(1rem, 0.7vw + 0.9rem, 1.25rem);
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.footer .credit span {
+  color: var(--cor-azul2);
+  opacity: 0.8;
+}
+
+
+   /* Responsividade */
+@media (max-width: 1300px) {
+  .footer {
+    padding: clamp(1.4rem, 1vw + 1rem, 2rem) 6%;
+    gap: clamp(0.7rem, 0.9vw, 1.2rem);
+  }
+}
+
+@media (max-width: 700px) {
+  .footer {
+    padding: 1.2rem 5%;
+    gap: 0.8rem;
+    border-top: none;
+  }
+  .footer .share {
+    gap: 0.6rem;
+  }
+  .footer .credit {
+    font-size: clamp(0.95rem, 0.6vw + 0.9rem, 1.1rem);
+    flex-wrap: wrap;
+  }
+}
+/* -- Final Footer Section  -- */
+
+
+
+/* =========================
+   BOTÃO FLUANTE DO WHATSAPP SECTION COMPLETO E RESPONSIVO
+========================= */
+
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 1px 1px 2px #888;
+    border: 3px solid #fff;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float i {
+    margin-top: 12px;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+/* -- Final Botão Flutuante do WhatsApp Section Section  -- */
+
+
+
