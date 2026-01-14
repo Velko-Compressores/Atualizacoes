@@ -40,33 +40,6 @@ body{
     background: var(--cor-branco);
 }
 
-.heading{
-    text-align: center;
-    color:var(--cor-azul1);
-    text-transform: uppercase;
-    font-size: 4rem;
-}
-
-.heading span{
-    color:var(--cor-azul2);
-    text-transform: uppercase;
-}
-
-.btn{
-    margin-top: 2rem;
-    display: inline-block;
-    padding: 1.1rem 3rem;
-    font-size: 2.1rem;
-    font-weight: 700;
-    border-radius: 5px;
-    color:var(--cor-branco);
-    background: var(--cor-azul1);
-    cursor: pointer;
-}
-
-.btn:hover{
-    background-color: var(--cor-azul2);
-}
 
 /* =========================
    HEADER COMPLETO E RESPONSIVO
@@ -80,13 +53,13 @@ body{
     position: fixed;
     top: 0; left: 0; right: 0;
     z-index: 1000;
-    min-height: 7rem; /* garante espaço para o logo maior */
+    min-height: 7rem;
 }
 
 .header .logo img {
-    height: 5.5rem;   /* tamanho desejado no desktop */
-    width: auto;      /* mantém proporção */
-    flex-shrink: 0;   /* evita compressão pelo flex */
+    height: 5.3rem;
+    width: auto;
+    flex-shrink: 0;
 }
 
 .header .navbar {
@@ -120,7 +93,7 @@ body{
 .header .icons button {
     background: none;
     border: none;
-    font-size: 2.5rem;
+    font-size: 1.9rem;
     color: var(--cor-azul1);
     cursor: pointer;
     margin-left: 2rem;
@@ -135,8 +108,9 @@ body{
     display: none;
 }
 
+
 /* ===== Responsividade ===== */
-@media (max-width: 1350px) {
+@media (max-width: 1670px) {
     .header .logo img {
         height: 5.2rem; /* menor que o desktop para caber melhor */
         width: auto;
@@ -192,13 +166,14 @@ body{
         font-size: 1.5rem;
     }
 }
+
 /* -- Final Header Section  -- */
+
 
 /* =========================
    HOME SECTION COMPLETO E RESPONSIVO
 ========================= */
 .home{
-    /* min-height: 80vh; */
     display: flex;
     align-items: center;
     background:url(../images/home-img.png) no-repeat;
@@ -222,6 +197,21 @@ body{
     line-height: 1.3;
 }
 
+ .home .btn{
+    margin-top: 2rem;
+    display: inline-block;
+    padding: 1.1rem 3rem;
+    font-size: 2.1rem;
+    font-weight: 700;
+    border-radius: 5px;
+    color:var(--cor-branco);
+    background: var(--cor-azul1);
+    cursor: pointer;
+}
+
+.home .btn:hover{
+    background-color: var(--cor-azul2);
+} 
 
 /* Responsividade */
 @media (max-width: 1350px) {
@@ -306,7 +296,20 @@ body{
     padding:5rem 7%;
     background-color: #f7f7f9;
 }
- .about .row{
+
+.about .heading{
+    text-align: center;
+    color:var(--cor-azul1);
+    text-transform: uppercase;
+    font-size: 4rem;
+}
+
+.about .heading span{
+    color:var(--cor-azul2);
+    text-transform: uppercase;
+} 
+
+.about .row{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -330,6 +333,22 @@ body{
     width: auto;
     font-size: 1.5rem;
 }
+
+.about .btn{
+    margin-top: 2rem;
+    display: inline-block;
+    padding: 1.1rem 3rem;
+    font-size: 2.1rem;
+    font-weight: 700;
+    border-radius: 5px;
+    color:var(--cor-branco);
+    background: var(--cor-azul1);
+    cursor: pointer;
+}
+
+.about .btn:hover{
+    background-color: var(--cor-azul2);
+} 
 
 /* Responsividade */
 @media (max-width: 1700px) {
@@ -410,8 +429,19 @@ body{
   padding: 5rem 7%;
 }
 
+.blogs .heading{
+    text-align: center;
+    color:var(--cor-azul1);
+    text-transform: uppercase;
+    font-size: 4rem;
+}
+
+.blogs .heading span{
+    color:var(--cor-azul2);
+    text-transform: uppercase;
+} 
+
 .blogs .box-container {
-  /* max-width: min(1300px, 90vw); */
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -419,7 +449,7 @@ body{
   align-items: stretch;
 }
 
-.box {
+.blogs .box {
   background: #fff;
   border: 1px solid #e6e6ea5b;
   border-radius: 10px;
@@ -430,14 +460,14 @@ body{
   flex-direction: column;
 }
 
-.box .content {
+.blogs .box .content {
   display: flex;
   flex-direction: column;
   height: 100%;
   text-align: center;
 }
 
-.box .content .title {
+.blogs .box .content .title {
   display: inline-block;
   text-decoration: none;
   font-weight: 700;
@@ -446,19 +476,19 @@ body{
   margin-bottom: 0.5rem;
 }
 
-.box .content p {
+.blogs .box .content p {
   font-size: clamp(1.1rem, 0.9vw + 0.8rem, 1.3rem);
   color: var(--cor-dourado);
   line-height: clamp(1.55, 1.2vw, 1.65); 
   margin: 0 0 0.75rem 0;
 }
 
-.box .content a{
+.blogs .box .content a{
   width: auto;
   font-size: clamp(1rem, 0.6vw + 0.8rem, 1.2rem);
 }
 
-.btn{
+.blogs .btn{
   margin-top: 2rem;
   display: inline-block;
   padding: clamp(0.9rem, 0.8vw + 0.6rem, 1.1rem) clamp(2rem, 2.2vw, 3rem);
@@ -469,11 +499,11 @@ body{
   background: var(--cor-azul1);
   cursor: pointer;
 }
-.btn:hover{
+.blogs .btn:hover{
   background-color: var(--cor-azul2);
 }
 
-.box .content .btn {
+.blogs .box .content .btn {
   margin-top: auto;
   align-self: center;
 }
@@ -481,29 +511,29 @@ body{
 /* Responsividade */
 @media (max-width: 1700px) {
   .blogs .heading {
-    font-size: 3.5rem;
+   font-size: 3.5rem;
   }
 }
 
-
-/* 3 colunas entre 900px e 1400px */
-@media (min-width: 900px) and (max-width: 1400px) {
-  .products .box-container {
-    /* max-width: 1200px; */
+@media (max-width: 1300px) {
+  .blogs .box-container {
     grid-template-columns: repeat(3, 1fr);
     gap: 1.25rem;
   }
 
-  .products .heading { font-size: 3rem; }
+  .blogs .heading { 
+    font-size: 2.5rem; 
+  }
 
-  .products .box .image-container img { height: 190px; }
+  .blogs .box .image-container img { 
+    height: 190px; 
+  }
 
-  .products .box .details-container .btn {
+  .blogs .box .details-container .btn {
     font-size: 1.9rem;
     padding: 1rem 2.6rem;
   }
 }
-
 
 @media (max-width: 700px) {
   .blogs .heading {
@@ -514,18 +544,18 @@ body{
     grid-template-columns: 1fr;
     gap: 0.9rem;
   }
-  .box {
+  .blogs .box {
     padding: 0.9rem;
     border-radius: 10px;
   }
-  .box .content .title {
+  .blogs .box .content .title {
     font-size: clamp(1.3rem, 4vw, 1.5rem);
   }
-  .box .content p {
+  .blogs .box .content p {
     font-size: clamp(1rem, 3.2vw, 1.2rem);
     line-height: 1.6;
   }
-  .box .content .btn {
+  .blogs .box .content .btn {
     font-size: clamp(1.3rem, 4vw, 1.6rem);
     padding: clamp(0.8rem, 3vw, 0.9rem) clamp(1.4rem, 5vw, 2rem);
   }
@@ -542,17 +572,19 @@ body{
   background-color: #f7f7f9;
 }
 
-.products .heading {
-  font-size: 3.5rem;
-  text-align: center;
-  color: var(--cor-azul1);
-}
-.products .heading span {
-  color: var(--cor-azul2);
+.products .heading{
+    text-align: center;
+    color:var(--cor-azul1);
+    text-transform: uppercase;
+    font-size: 4rem;
 }
 
+.products .heading span{
+    color:var(--cor-azul2);
+    text-transform: uppercase;
+} 
+
 .products .box-container {
-  /* max-width: 1300px; */
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -567,10 +599,10 @@ body{
   padding: 1rem;
   box-shadow: 0 6px 18px rgba(0,0,0,0.06);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-
   display: flex;
   flex-direction: column;
 }
+
 .products .box:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 24px rgba(0,0,0,0.08);
@@ -591,6 +623,7 @@ body{
   margin-bottom: 0.6rem;
   color: var(--cor-azul2);
 }
+
 .products .box .content .stars i {
   font-size: 1rem;
 }
@@ -605,6 +638,7 @@ body{
 .products .box .content .image {
   margin: 0.4rem 0 0.9rem 0;
 }
+
 .products .box .content .image img {
   width: 100%;
   height: 200px;
@@ -623,6 +657,7 @@ body{
   background: var(--cor-azul1);
   cursor: pointer;
 }
+
 .products .btn:hover {
   background-color: var(--cor-azul2);
 }
@@ -633,13 +668,12 @@ body{
 }
 
 /* Responsividade */
-@media (max-width: 1400px) and (min-width: 701px) {
+@media (max-width: 1700px) {
   .products .heading {
-    font-size: 3.2rem;
+    font-size: 3.5rem;
   }
 
   .products .box-container {
-    /* max-width: 1100px; */
     grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem;
   }
@@ -662,6 +696,11 @@ body{
   }
 }
 
+@media (max-width: 1300px) {
+  .products .heading {
+    font-size: 2.5rem; 
+  }
+}
 @media (max-width: 700px) {
   .products .heading {
     font-size: 2.3rem;
@@ -698,6 +737,103 @@ body{
 /* -- Final Products Section  -- */
 
 
+
+/* =========================
+   WEBSOFTWARE SECTION COMPLETO E RESPONSIVO
+========================= */
+
+.software, .software * {
+  box-sizing: border-box;
+}
+
+.software {
+  padding: 5rem 7%;
+}
+
+.software .heading{
+    text-align: center;
+    color:var(--cor-azul1);
+    text-transform: uppercase;
+    font-size: 4rem;
+}
+
+.software .heading span{
+    color:var(--cor-azul2);
+    text-transform: uppercase;
+}
+
+.software iframe {
+    width: 100%;
+    height: 80vh;
+    border: none;
+}
+
+/* Responsividade */
+@media (max-width: 1700px) {
+  .software .heading {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 1300px) {
+
+  .software .heading {
+    font-size: 2.5rem; 
+  }
+  .software .row {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+    padding: 0;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  .software .row .map, .software .row form {
+    border-radius: 0;
+    height: clamp(320px, 48vh, 500px);
+  }
+
+  .software .row .map iframe { 
+    width: 100%; height: 100%; object-fit: cover; 
+  }
+
+  .software.row form {
+    padding: clamp(0.8rem, 1vw + 0.5rem, 1.1rem);
+    gap: clamp(0.35rem, 0.5vw, 0.6rem);
+  }
+
+  .software .row form h3 {
+    font-size: clamp(1.15rem, 0.85vw + 1rem, 1.5rem);
+  }
+
+}
+
+
+@media (max-width: 700px) {
+  .software { 
+    padding: 2rem 5%; 
+  }
+  .software .heading { 
+    font-size: 1.9rem; 
+    margin-bottom: 1rem; 
+  }
+
+  .software .row .map,
+  .software .row form {
+    height: clamp(300px, 46vh, 420px);
+  }
+  .software .row form {
+    padding: clamp(0.7rem, 0.9vw + 0.45rem, 1rem);
+    gap: clamp(0.3rem, 0.45vw, 0.5rem);
+  }
+  .software .row form h3 {
+    font-size: clamp(1.1rem, 0.8vw + 0.95rem, 1.35rem);
+  }
+
+}
+/* -- Final Contact Section  -- */
+
+
 /* =========================
    CONTACT SECTION COMPLETO E RESPONSIVO
 ========================= */
@@ -707,16 +843,21 @@ body{
 }
 
 .contact {
-  padding: 4rem 7%;
+  padding: 5rem 7%;
+  background-color: #f7f7f9;
 }
 
-.contact .heading {
-  font-size: clamp(2rem, 1.4vw + 1.5rem, 2.8rem);
+.contact .heading{
   text-align: center;
-  color: var(--cor-azul1);
-  margin-bottom: 2rem;
+  color:var(--cor-azul1);
+  text-transform: uppercase;
+  font-size: 4rem;
 }
-.contact .heading span { color: var(--cor-azul2); }
+
+.contact .heading span{
+  color:var(--cor-azul2);
+  text-transform: uppercase;
+} 
 
 .contact .row {
   display: grid;
@@ -729,8 +870,7 @@ body{
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
 }
 
-.contact .row .map,
-.contact .row form {
+.contact .row .map, .contact .row form {
   width: 100%;
   height: clamp(360px, 52vh, 540px);
   border: 1px solid #e6e6ea5b;
@@ -789,8 +929,7 @@ body{
   padding-right: clamp(0.3rem, 0.5vw, 0.6rem);
 }
 
-.contact .row form .inputBox input,
-.contact .row form .inputBox textarea {
+.contact .row form .inputBox input, .contact .row form .inputBox textarea {
   width: 100%;
   padding: clamp(0.5rem, 0.6vw + 0.35rem, 0.85rem) clamp(0.7rem, 0.8vw + 0.5rem, 1rem);
   font-size: clamp(0.85rem, 0.6vw + 0.8rem, 1.05rem);
@@ -835,8 +974,16 @@ body{
 }
 
 /* Responsividade */
+@media (max-width: 1700px) {
+  .contact .heading {
+    font-size: 3.5rem;
+  }
+}
 
 @media (max-width: 1300px) {
+  .contact .heading {
+    font-size: 2.5rem; 
+  }
   .contact .row {
     grid-template-columns: 1fr;
     gap: 0.9rem;
@@ -844,12 +991,13 @@ body{
     box-shadow: none;
     background: transparent;
   }
-  .contact .row .map,
-  .contact .row form {
+  .contact .row .map, .contact .row form {
     border-radius: 0;
     height: clamp(320px, 48vh, 500px);
   }
-  .contact .row .map iframe { width: 100%; height: 100%; object-fit: cover; }
+  .contact .row .map iframe { 
+    width: 100%; height: 100%; object-fit: cover; 
+  }
 
   .contact .row form {
     padding: clamp(0.8rem, 1vw + 0.5rem, 1.1rem);
@@ -878,11 +1026,15 @@ body{
 }
 
 @media (max-width: 700px) {
-  .contact { padding: 2rem 5%; }
-  .contact .heading { font-size: 1.9rem; margin-bottom: 1rem; }
+  .contact { 
+    padding: 2rem 5%; 
+  }
+  .contact .heading { 
+    font-size: 1.9rem; 
+    margin-bottom: 1rem; 
+  }
 
-  .contact .row .map,
-  .contact .row form {
+  .contact .row .map, .contact .row form {
     height: clamp(300px, 46vh, 420px);
   }
   .contact .row form {
@@ -895,8 +1047,7 @@ body{
   .contact .row form .inputBox {
     min-height: clamp(36px, 4.1vh, 48px);
   }
-  .contact .row form .inputBox input,
-  .contact .row form .inputBox textarea {
+  .contact .row form .inputBox input, .contact .row form .inputBox textarea {
     padding: clamp(0.42rem, 0.5vw + 0.28rem, 0.7rem) clamp(0.6rem, 0.7vw + 0.4rem, 0.9rem);
     font-size: clamp(0.8rem, 0.5vw + 0.75rem, 0.95rem);
   }
@@ -1041,6 +1192,25 @@ body{
 }
 
 /* -- Final Botão Flutuante do WhatsApp Section Section  -- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1244,3 +1414,6 @@ h1 {
 
 
 
+
+
+        

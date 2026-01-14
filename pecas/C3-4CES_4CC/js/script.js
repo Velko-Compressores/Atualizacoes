@@ -48,7 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Lista de produtos da Página 01 (mantenha/complete conforme sua página)
     const products = {
         1: { name: 'JOGO DE VEDACOES - 4FC/4FES', image: 'images/1 - Gasket set.png', description: 'Peça de vedação para compressores.' },
-        // 2: { name: 'Built-in motor', image: 'images/2 - Built-in motor.png', description: 'Motor embutido para alta performance.' },
         4: { name: 'CHAVETA ROTOR - A10 X 6 X 56 C3/CE3', image: 'images/4 - Parallel key.png', description: 'Chave paralela para fixação segura.' },
         5: { name: 'ARRUELA FX CV ROTOR - 45 X 12,5 X 3,5 C2/C3/CE2/CE3', image: 'images/5 - Washer.png', description: 'Arruela para suporte mecânico.' },
         9: { name: 'ARRUELA LISA - A10 X 16 X 2 DIN7603 C2/3/4 CE2/3/4', image: 'images/9 - Gasket ring.png', description: 'Descrição do item.' },
