@@ -44,7 +44,8 @@
                 <li><a href="#blogs">SERVIÇOS</a></li>
                 <li><a href="#products">PRODUTOS</a></li>
                 <li><a href="#contact">CONTATO</a></li>
-                <li><a href="#software">BITZER SOFTWARE</a></li>
+                <!-- <li><a href="#software">BITZER SOFTWARE</a></li> -->
+                <li><a href='#' id='abrirModalSoftware'>BITZER SOFTWARE</a></li>
             </ul>
         </nav>
         <div class="icons">
@@ -254,7 +255,7 @@
 
 
 <!-- Inicio Software Section -->
-    <section class="software" id="software">
+    <!-- <section class="software" id="software">
         <h1 class="heading"> <span>Teste a </span> Ferramenta BITZER </h1>
             <div class="container">
                 <iframe 
@@ -274,8 +275,18 @@
                 <a href="https://www.bitzer.de/shared_media/files/BITZER-Software_7.1.1-2_x64-setup.exe">AQUI</a>
                 </span> para baixar a Ferramenta BITZER.
             </h3>
-    </section>
+    </section> -->
 <!-- Final Software Section -->
+
+<div id='modalBitzer' class='modal'>
+    <div class='modal-conteudo'>
+        <h2>BITZER SOFTWARE</h2>
+        <p>A Ferramenta BITZER não pode ser carregada diretamente no site porque o servidor força conexões <strong>HTTP inseguras</strong>, bloqueadas em HTTPS.</p>
+        <a class='btn-modal' href='https://www.bitzer.de/websoftware' target='_blank'>Abrir Ferramenta BITZER</a>
+        <a class='btn-modal' href='https://www.bitzer.de/shared_media/files/BITZER-Software_7.1.1-2_x64-setup.exe' target='_blank'>Baixar Software BITZER</a>
+        <button id='fecharModal' class='btn-fechar'>Fechar</button>
+    </div>
+</div>
 
 
 <!-- Inicio Contact Section -->
