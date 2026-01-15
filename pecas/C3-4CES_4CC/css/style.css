@@ -171,20 +171,22 @@ body{
 
 
 
-
 /* =========================
    SEÇÃO ABOUT
 ========================= */
 
+/* 
 .table-wrapper {
-    max-height: 700px; /* altura fixa para a área da tabela */
-    overflow-y: auto; /* rolagem interna */
+    max-height: 700px;
+    overflow-y: auto;
     margin-bottom: 20px;
     border-radius: 6px;
     border: 1px solid #ddd;
-}
+} 
+*/
 
 /* Mantém cabeçalho fixo */
+/* 
 .cart-table thead {
     position: sticky;
     top: 0;
@@ -195,8 +197,8 @@ body{
 
 .about {
     width: 100%;
-    min-height: calc(100vh - 9.5rem); /* ocupa toda a tela menos a navbar */
-    margin-top: 9.5rem; /* compensação da navbar fixa */
+    min-height: calc(100vh - 9.5rem);
+    margin-top: 9.5rem;
     padding: 2rem 7%;
     background: var(--cor-branco);
     display: flex;
@@ -210,11 +212,13 @@ body{
     align-items: stretch;
     justify-content: space-between;
     height: 100%;
-}
+} 
+    */
 
 /* Conteúdo (mantendo suas configs) */
+/* 
 .content {
-    flex: 1; /* menor proporção */
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -222,16 +226,17 @@ body{
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
+} */
 
-.section-title {
+/* .section-title {
     font-size: 2.5rem;
     color: var(--cor-azul1);
     margin-bottom: 15px;
     text-align: center;
-}
+} */
 
 /* Tabela */
+/* 
 .table-wrapper {
     flex: 1;
     overflow-y: auto;
@@ -258,15 +263,16 @@ body{
     font-size: 1.5rem;
     text-align: center;
     border-bottom: 1px solid #ddd;
-}
+} */
 
 /* Remove cores alternadas */
-.cart-table tbody tr:nth-child(odd),
+/* .cart-table tbody tr:nth-child(odd),
 .cart-table tbody tr:nth-child(even) {
-    background-color: var(--cor-branco); /* tudo branco */
-}
+    background-color: var(--cor-branco);
+} */
 
 /* Botão */
+/* 
 .btn {
     display: inline-block;
     padding: 12px;
@@ -283,11 +289,12 @@ body{
 
 .btn:hover {
     background-color: var(--cor-azul2);
-}
+} */
 
 /* SVG Wrapper */
+/* 
 .svg-wrapper {
-    flex: 2; /* imagem ocupa o dobro do espaço */
+    flex: 2;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -298,14 +305,15 @@ body{
 
 #compressor-img {
     width: 100%;
-    max-width: 90rem; /* aumenta limite para imagem */
+    max-width: 90rem;
     height: auto;
     display: block;
-}
+} */
 
 /* === Configuração do Content/Carrinho Itens === */
 
 /* 1. Botões (+/-) com cores e hover */
+/* 
 .quantity-controls button {
     border: none;
     font-size: 1.6rem;
@@ -316,36 +324,38 @@ body{
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
     color: #fff;
-}
+} */
 
 /* Botão diminuir (-) */
+/* 
 .quantity-controls .decrease {
-    background-color: #f87d6f; /* vermelho */
+    background-color: #f87d6f;
 }
 .quantity-controls .decrease:hover {
     background-color: #c0392b;
     transform: scale(1.1);
-}
+} */
 
 /* Botão aumentar (+) */
+/* 
 .quantity-controls .increase {
-    background-color: #82fdb6; /* verde */
+    background-color: #82fdb6;
 }
 .quantity-controls .increase:hover {
     background-color: #1e8449;
     transform: scale(1.1);
-}
+} */
 
 /* Espaçamento entre botões e número */
-.quantity-controls {
+/* .quantity-controls {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-}
+} */
 
 /* 2. Imagem com bordas e efeito hover */
-.cart-img {
+/* .cart-img {
     width: 80px;
     height: 80px;
     object-fit: cover;
@@ -357,24 +367,25 @@ body{
 .cart-img:hover {
     transform: scale(1.1);
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
+} */
 
 /* 3. Nome do item em negrito */
-.cart-table td:first-child {
+/* .cart-table td:first-child {
     font-weight: bold;
     font-size: 1.6rem;
     color: var(--cor-azul1);
-}
+} */
 
 
 /* Responsividade */
+/* 
 @media (max-width: 768px) {
     .about {
-        min-height: auto; /* remove altura fixa */
+        min-height: auto;
         margin-top: 9.5rem;
     }
     .about .row {
-        flex-direction: column-reverse; /* imagem acima do conteúdo */
+        flex-direction: column-reverse;
         gap: 2rem;
     }
     .svg-wrapper,
@@ -385,7 +396,7 @@ body{
         max-width: 100%;
     }
 }
-
+ */
 
 
 /* =========================

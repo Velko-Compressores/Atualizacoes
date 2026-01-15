@@ -1,27 +1,16 @@
 
-/*===  inicio section resposiva  === */
-let navbar = document.querySelector('.navbar');
+/*====================================================================================== */
+/*==============  ESCRIPT DESATIVADO /   ESCRIPT DESATIVADO  ============== */
+/*====================================================================================== */
 
-document.querySelector('#menu-btn').onclick = () =>{
-    navbar.classList.toggle('active');
-    searchForm.classList.remove('active');
-    cartItem.classList.remove('active');
-}
-/*===  Final Section Resposiva  === */
+/*====================================================================================== */
+/*==============  ESCRIPT DESATIVADO /   ESCRIPT DESATIVADO  ============== */
+/*====================================================================================== */
 
+/*====================================================================================== */
+/*==============  ESCRIPT DESATIVADO /   ESCRIPT DESATIVADO  ============== */
+/*====================================================================================== */
 
-/*===  Inicio section para arrastar livremente  === */
-document.addEventListener('DOMContentLoaded', function () {
-    const image = document.getElementById('compressor-img');
-    const panzoom = Panzoom(image, {
-    minScale: 0.1,
-    maxScale: 1000,
-    contain: 'false',
-    canvas: true // permite arrastar livremente
-    });
-    // Zoom com roda do mouse
-    image.parentElement.addEventListener('wheel', panzoom.zoomWithWheel);
-});
 
 
 /*====================================================================================== */
@@ -46,9 +35,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
 
     // Lista de produtos da Página 01 (mantenha/complete conforme sua página)
+    
     const products = {
         1: { name: 'JOGO DE VEDACOES - 4FC/4FES', image: 'images/1 - Gasket set.png', description: 'Peça de vedação para compressores.' },
-        // 2: { name: 'Built-in motor', image: 'images/2 - Built-in motor.png', description: 'Motor embutido para alta performance.' },
         4: { name: 'CHAVETA ROTOR - A10 X 6 X 56 C3/CE3', image: 'images/4 - Parallel key.png', description: 'Chave paralela para fixação segura.' },
         5: { name: 'ARRUELA FX CV ROTOR - 45 X 12,5 X 3,5 C2/C3/CE2/CE3', image: 'images/5 - Washer.png', description: 'Arruela para suporte mecânico.' },
         9: { name: 'ARRUELA LISA - A10 X 16 X 2 DIN7603 C2/3/4 CE2/3/4', image: 'images/9 - Gasket ring.png', description: 'Descrição do item.' },

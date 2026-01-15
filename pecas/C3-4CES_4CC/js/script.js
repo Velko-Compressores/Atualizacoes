@@ -1,27 +1,16 @@
 
-/*===  inicio section resposiva  === */
-let navbar = document.querySelector('.navbar');
+/*====================================================================================== */
+/*==============  ESCRIPT DESATIVADO /   ESCRIPT DESATIVADO  ============== */
+/*====================================================================================== */
 
-document.querySelector('#menu-btn').onclick = () =>{
-    navbar.classList.toggle('active');
-    searchForm.classList.remove('active');
-    cartItem.classList.remove('active');
-}
-/*===  Final Section Resposiva  === */
+/*====================================================================================== */
+/*==============  ESCRIPT DESATIVADO /   ESCRIPT DESATIVADO  ============== */
+/*====================================================================================== */
 
+/*====================================================================================== */
+/*==============  ESCRIPT DESATIVADO /   ESCRIPT DESATIVADO  ============== */
+/*====================================================================================== */
 
-/*===  Inicio section para arrastar livremente  === */
-document.addEventListener('DOMContentLoaded', function () {
-    const image = document.getElementById('compressor-img');
-    const panzoom = Panzoom(image, {
-    minScale: 0.1,
-    maxScale: 1000,
-    contain: 'false',
-    canvas: true // permite arrastar livremente
-    });
-    // Zoom com roda do mouse
-    image.parentElement.addEventListener('wheel', panzoom.zoomWithWheel);
-});
 
 
 /*====================================================================================== */
@@ -46,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
 
     // Lista de produtos da Página 01 (mantenha/complete conforme sua página)
+    
     const products = {
         1: { name: 'JOGO DE VEDACOES - 4FC/4FES', image: 'images/1 - Gasket set.png', description: 'Peça de vedação para compressores.' },
         4: { name: 'CHAVETA ROTOR - A10 X 6 X 56 C3/CE3', image: 'images/4 - Parallel key.png', description: 'Chave paralela para fixação segura.' },
