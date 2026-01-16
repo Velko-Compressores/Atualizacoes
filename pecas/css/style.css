@@ -335,3 +335,64 @@ body{
 /* -- Final Botão Flutuante do WhatsApp Section Section  -- */
 
 
+
+
+
+
+
+.modal{
+  display:none;
+  position:fixed;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.65);
+  z-index:1000
+}
+  .modal-conteudo{
+    background:#fff;
+    width:90%;
+    max-width:500px;
+    margin:8% auto;
+    padding:25px;
+    border-radius:12px;
+    text-align:center;
+    animation:fadeIn .35s
+  }
+  @keyframes fadeIn{from{
+    opacity:0;
+    transform:scale(.9)}to{
+      opacity:1;
+      transform:scale(1)}
+    }
+  .btn-modal{
+    display:block;
+    background:#0c7a3d;
+    color:#fff;
+    padding:12px;
+    border-radius:8px;
+    margin:10px 0;
+    font-size:17px;
+    text-decoration:none
+  }
+  .btn-modal:hover{
+    background:#0a6131
+  }
+  .btn-fechar{
+    background:#b30000;
+    color:#fff;
+    padding:10px 20px;
+    border-radius:6px;
+    border:none;
+    margin-top:15px;
+    cursor:pointer;
+    font-size:16px
+  }
+  .btn-fechar:hover{
+    background:#900
+  }
+
+
+
+

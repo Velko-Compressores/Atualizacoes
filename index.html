@@ -27,7 +27,8 @@
   <script src="https://unpkg.com/@panzoom/panzoom/dist/panzoom.min.js" defer></script>
 
   <!-- custom js file link  -->
-  <script src="assets/js/script.js" defer></script>
+  <script src="assets/js/avisoSoftwareBitzer.js" defer></script>
+  <script src="assets/js/menuResponsivo.js" defer></script>
   <!-- <script src="assets/js/pageHome.js" defer></script> -->
 
 </head>
@@ -56,46 +57,6 @@
         </div>
     </header>
 <!-- Final Header Section  -->
-
-
-
-
-<!-- Painel do carrinho na Home -->
-<article class="content">
-  <div class="table-wrapper" role="region" aria-label="Tabela de itens">
-    <table class="cart-table" role="table">
-      <thead>
-        <tr>
-          <th scope="col">Item</th>
-          <th scope="col">Quantidade</th>
-          <th scope="col">Imagem</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- JS insere os itens aqui -->
-      </tbody>
-    </table>
-  </div>
-
-  <button type="button" class="btn" id="purchaseButton" aria-label="Finalizar Compra">
-    Finalizar Compra
-  </button>
-</article>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -321,15 +282,18 @@
     </section> -->
 <!-- Final Software Section -->
 
-<div id='modalBitzer' class='modal'>
-    <div class='modal-conteudo'>
-        <h2>BITZER SOFTWARE</h2>
-        <p>A Ferramenta BITZER não pode ser carregada diretamente no site porque o servidor força conexões <strong>HTTP inseguras</strong>, bloqueadas em HTTPS.</p>
-        <a class='btn-modal' href='https://www.bitzer.de/websoftware' target='_blank'>Abrir Ferramenta BITZER</a>
-        <a class='btn-modal' href='https://www.bitzer.de/shared_media/files/BITZER-Software_7.1.1-2_x64-setup.exe' target='_blank'>Baixar Software BITZER</a>
-        <button id='fecharModal' class='btn-fechar'>Fechar</button>
+
+<!-- === Inicio Modal de Avido Software Bitzer === -->
+    <div id='modalBitzer' class='modal'>
+        <div class='modal-conteudo'>
+            <h2>BITZER SOFTWARE</h2>
+            <p>A Ferramenta BITZER não pode ser carregada diretamente no site porque o servidor força conexões <strong>HTTP inseguras</strong>, bloqueadas em HTTPS.</p>
+            <a class='btn-modal' href='https://www.bitzer.de/websoftware' target='_blank'>Abrir Ferramenta BITZER</a>
+            <a class='btn-modal' href='https://www.bitzer.de/shared_media/files/BITZER-Software_7.1.1-2_x64-setup.exe' target='_blank'>Baixar Software BITZER</a>
+            <button id='fecharModal' class='btn-fechar'>Fechar</button>
+        </div>
     </div>
-</div>
+<!-- === Final Modal de Avido Software Bitzer === -->
 
 
 <!-- Inicio Contact Section -->

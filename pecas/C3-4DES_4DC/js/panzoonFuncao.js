@@ -1,12 +1,4 @@
 
-/*===  inicio section resposiva  === */
-let navbar = document.querySelector('.navbar');
-
-document.querySelector('#menu-btn').onclick = () =>{
-    navbar.classList.toggle('active');
-}
-/*===  Final Section Resposiva  === */
-
 
 /*===  Inicio section para arrastar livremente  === */
 document.addEventListener('DOMContentLoaded', function () {

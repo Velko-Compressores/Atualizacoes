@@ -172,234 +172,6 @@ body{
 
 
 /* =========================
-   SEÇÃO ABOUT
-========================= */
-
-/* 
-.table-wrapper {
-    max-height: 700px;
-    overflow-y: auto;
-    margin-bottom: 20px;
-    border-radius: 6px;
-    border: 1px solid #ddd;
-} 
-*/
-
-/* Mantém cabeçalho fixo */
-/* 
-.cart-table thead {
-    position: sticky;
-    top: 0;
-    background-color: var(--cor-azul1);
-    color: var(--cor-branco);
-    z-index: 2;
-}
-
-.about {
-    width: 100%;
-    min-height: calc(100vh - 9.5rem);
-    margin-top: 9.5rem;
-    padding: 2rem 7%;
-    background: var(--cor-branco);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.about .row {
-    display: flex;
-    gap: 2rem;
-    align-items: stretch;
-    justify-content: space-between;
-    height: 100%;
-} 
-    */
-
-/* Conteúdo (mantendo suas configs) */
-/* 
-.content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background: var(--cor-branco);
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-} */
-
-/* .section-title {
-    font-size: 2.5rem;
-    color: var(--cor-azul1);
-    margin-bottom: 15px;
-    text-align: center;
-} */
-
-/* Tabela */
-/* 
-.table-wrapper {
-    flex: 1;
-    overflow-y: auto;
-    margin-bottom: 20px;
-    border-radius: 6px;
-}
-
-.cart-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.cart-table thead {
-    background-color: var(--cor-azul1);
-    color: var(--cor-branco);
-    position: sticky;
-    top: 0;
-    text-align: center;
-}
-
-.cart-table th,
-.cart-table td {
-    padding: 12px;
-    font-size: 1.5rem;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
-} */
-
-/* Remove cores alternadas */
-/* .cart-table tbody tr:nth-child(odd),
-.cart-table tbody tr:nth-child(even) {
-    background-color: var(--cor-branco);
-} */
-
-/* Botão */
-/* 
-.btn {
-    display: inline-block;
-    padding: 12px;
-    background-color: var(--cor-azul1);
-    color: var(--cor-branco);
-    font-size: 1.6rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 100%;
-}
-
-.btn:hover {
-    background-color: var(--cor-azul2);
-} */
-
-/* SVG Wrapper */
-/* 
-.svg-wrapper {
-    flex: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--cor-branco);
-    border-radius: 8px;
-    padding: 10px;
-}
-
-#compressor-img {
-    width: 100%;
-    max-width: 90rem;
-    height: auto;
-    display: block;
-} */
-
-/* === Configuração do Content/Carrinho Itens === */
-
-/* 1. Botões (+/-) com cores e hover */
-/* 
-.quantity-controls button {
-    border: none;
-    font-size: 1.6rem;
-    font-weight: bold;
-    width: 36px;
-    height: 36px;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    color: #fff;
-} */
-
-/* Botão diminuir (-) */
-/* 
-.quantity-controls .decrease {
-    background-color: #f87d6f;
-}
-.quantity-controls .decrease:hover {
-    background-color: #c0392b;
-    transform: scale(1.1);
-} */
-
-/* Botão aumentar (+) */
-/* 
-.quantity-controls .increase {
-    background-color: #82fdb6;
-}
-.quantity-controls .increase:hover {
-    background-color: #1e8449;
-    transform: scale(1.1);
-} */
-
-/* Espaçamento entre botões e número */
-/* .quantity-controls {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-} */
-
-/* 2. Imagem com bordas e efeito hover */
-/* .cart-img {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 8px;
-    border: 2px solid #ddd;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.cart-img:hover {
-    transform: scale(1.1);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-} */
-
-/* 3. Nome do item em negrito */
-/* .cart-table td:first-child {
-    font-weight: bold;
-    font-size: 1.6rem;
-    color: var(--cor-azul1);
-} */
-
-
-/* Responsividade */
-/* 
-@media (max-width: 768px) {
-    .about {
-        min-height: auto;
-        margin-top: 9.5rem;
-    }
-    .about .row {
-        flex-direction: column-reverse;
-        gap: 2rem;
-    }
-    .svg-wrapper,
-    .content {
-        width: 100%;
-    }
-    #compressor-img {
-        max-width: 100%;
-    }
-}
- */
-
-
-/* =========================
    FOOTER SECTION COMPLETO E RESPONSIVO
 ========================= */
 
@@ -536,287 +308,58 @@ body{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*===  Inicio Modal Imagem produto expandida === */
-
-.modal {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.7);
-    display: none; 
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
+.modal{
+  display:none;
+  position:fixed;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.65);
+  z-index:1000
 }
-
-.modal-content {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    position: relative;
-    max-width: 600px;
-    width: 90%; 
-}
-
-.close-btn {
-    position: absolute;
-    top: 10px; right: 20px;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-.modal img {
-    max-width: 500px;
-    margin-bottom: 10px;
-}
-
-#modal-info {
-    font-size: 1.7rem;
-    color: #333;
-    margin-top: 10px;
-}
-
-@media (max-width: 768px) {
-    .modal-content {
-        max-width: 90%;
-        padding: 15px;
+  .modal-conteudo{
+    background:#fff;
+    width:90%;
+    max-width:500px;
+    margin:8% auto;
+    padding:25px;
+    border-radius:12px;
+    text-align:center;
+    animation:fadeIn .35s
+  }
+  @keyframes fadeIn{from{
+    opacity:0;
+    transform:scale(.9)}to{
+      opacity:1;
+      transform:scale(1)}
     }
-
-    .modal img {
-        max-width: 200px;
-        margin-bottom: 5px;
-    }
-} 
-
-/*===  Final Modal === */
-
-
-/*===  Inicio Modal para Finalizar Compra === */
-/* Overlay do modal */
-#checkout-modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-}
-
-/* Conteúdo do modal */
-#checkout-modal .modal-content {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    width: 350px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    font-family: Arial, sans-serif;
-}
-
-/* Título */
-#checkout-modal h3 {
-    margin-bottom: 15px;
-    font-size: 20px;
-    color: var(--cor-azul1)
-}
-
-/* Inputs */
-#checkout-modal input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 14px;
-}
-
-/* Botões */
-#checkout-modal button {
-    width: 48%;
-    padding: 10px;
-    margin: 5px 1%;
-    border: none;
-    border-radius: 6px;
-    font-size: 14px;
-    cursor: pointer;
-}
-
-#confirm-checkout {
-    background-color: var(--cor-green1);
-    color: var(--cor-branco);
-}
-
-#confirm-checkout:hover {
-    background-color: var(--cor-green2);
-}
-
-#close-checkout {
-    background-color: var(--cor-red1);
-    color: var(--cor-branco);
-}
-
-#close-checkout:hover {
-    background-color: var(--cor-red2);
-}
-
-/*===  Final Modal para Finalizar Compra === */
-
-
-
-/* -- Inicio Stilo Modal do carrinho master -- */
-
-.modal {
-  display: none;
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.6);
-  justify-content: center;
-  align-items: center;
-}
-.modal-content {
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  width: 90%;
-  max-width: 500px;
-}
-#master-modal-body .master-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-
-
-
-/* -- Inicio Stilo Pagina Finalizar Compra -- */
-
-/* Título principal */
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 2rem;
-    color: #222;
-}
-
-/* Tabela do carrinho */
-.cart-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 30px;
-    background: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.cart-table th, .cart-table td {
-    padding: 15px;
-    text-align: left;
-    border-bottom: 1px solid #eee;
-}
-
-.cart-table tr:last-child td {
-    border-bottom: none;
-}
-
-.cart-table td img {
-    max-width: 60px;
-    border-radius: 4px;
-}
-
-/* Container do checkout */
-#checkout-page {
-    max-width: 500px;
-    margin: 0 auto;
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.page-content h3 {
-    margin-bottom: 15px;
-    font-size: 1.2rem;
-    color: #444;
-}
-
-/* Inputs */
-.page-content input {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 1rem;
-    transition: border-color 0.3s;
-}
-
-.page-content input:focus {
-    border-color: #0078d7;
-    outline: none;
-}
-
-/* Botão */
-#confirm-checkout {
-    width: 100%;
-    padding: 14px;
-    background: #0078d7;
-    color: #fff;
-    font-size: 1.1rem;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-#confirm-checkout:hover {
-    background: #005fa3;
-}
-
-
+  .btn-modal{
+    display:block;
+    background:#0c7a3d;
+    color:#fff;
+    padding:12px;
+    border-radius:8px;
+    margin:10px 0;
+    font-size:17px;
+    text-decoration:none
+  }
+  .btn-modal:hover{
+    background:#0a6131
+  }
+  .btn-fechar{
+    background:#b30000;
+    color:#fff;
+    padding:10px 20px;
+    border-radius:6px;
+    border:none;
+    margin-top:15px;
+    cursor:pointer;
+    font-size:16px
+  }
+  .btn-fechar:hover{
+    background:#900
+  }
 
 
 
