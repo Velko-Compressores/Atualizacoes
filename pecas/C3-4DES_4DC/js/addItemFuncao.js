@@ -2,18 +2,18 @@
 // Página C3-4DES-4DC — Prefixo + catálogo local (sem preço)
 window.PAGE_PREFIX = 'C3-4DES-4DC';
 window.PRODUCT_CATALOG = {
-  1:  { id: 1,  name: 'Item-Gasket set - C3-4DES-4DC', img: 'images/1 - Gasket set.png',  desc: 'Conjunto de juntas para compressores C3-4CES-4CC.' },
-  5:  { id: 5,  name: 'Item-Gasket set - C3-4DES-4DC', img: 'images/1 - Gasket set.png',  desc: 'Conjunto de juntas para manutenção preventiva.' },
-  9:  { id: 9,  name: 'Item-Gasket set - C3-4DES-4DC', img: 'images/1 - Gasket set.png',  desc: 'Peça de reposição original.' },
-  11: { id: 11, name: 'Item-Gasket set - C3-4DES-4DC', img: 'images/1 - Gasket set.png', desc: 'Compatível com linha C4-4VES-6.' },
-  13: { id: 13, name: 'Item-Gasket set - C3-4DES-4DC', img: 'images/1 - Gasket set.png', desc: 'Alta durabilidade e vedação.' },
-  24: { id: 24, name: 'Item-Gasket set - C3-4DES-4DC', img: 'images/1 - Gasket set.png', desc: 'Recomendado para revisões programadas.' },
-  30: { id: 30, name: 'Item-Gasket set - C3-4DES-4DC', img: 'images/1 - Gasket set.png', desc: 'Item compatível com diversos modelos.' },
-  33: { id: 33, name: 'Item-Gasket set - C3-4DES-4DC', img: 'images/1 - Gasket set.png', desc: 'Aplicação em compressores C4-4PES-10.' },
-  34: { id: 34, name: 'Item-Gasket set - C3-4DES-4DC', img: 'images/1 - Gasket set.png', desc: 'Ótima vedação e performance.' },
-  55: { id: 55, name: 'Item-Gasket set - C3-4DES-4DC', img: 'images/1 - Gasket set.png', desc: 'Peça original de reposição.' },
-  57: { id: 57, name: 'Item-Gasket set - C3-4DES-4DC', img: 'images/1 - Gasket set.png', desc: 'Instalação simples e rápida.' },
-  75: { id: 75, name: 'Item-Gasket set - C3-4DES-4DC', img: 'images/1 - Gasket set.png', desc: 'Confiabilidade comprovada.' }
+  1:  { id: 1,  name: 'Item-Gasket set - C3-4DES-4DC', img: '/assets/images/pecas-C3-4DES-4DC/1 - Gasket set.png',  desc: 'Conjunto de juntas para compressores C3-4CES-4CC.' },
+  5:  { id: 5,  name: 'Item-Gasket set - C3-4DES-4DC', img: '/assets/images/pecas-C3-4DES-4DC/1 - Gasket set.png',  desc: 'Conjunto de juntas para manutenção preventiva.' },
+  9:  { id: 9,  name: 'Item-Gasket set - C3-4DES-4DC', img: '/assets/images/pecas-C3-4DES-4DC/1 - Gasket set.png',  desc: 'Peça de reposição original.' },
+  11: { id: 11, name: 'Item-Gasket set - C3-4DES-4DC', img: '/assets/images/pecas-C3-4DES-4DC/1 - Gasket set.png', desc: 'Compatível com linha C4-4VES-6.' },
+  13: { id: 13, name: 'Item-Gasket set - C3-4DES-4DC', img: '/assets/images/pecas-C3-4DES-4DC/1 - Gasket set.png', desc: 'Alta durabilidade e vedação.' },
+  24: { id: 24, name: 'Item-Gasket set - C3-4DES-4DC', img: '/assets/images/pecas-C3-4DES-4DC/1 - Gasket set.png', desc: 'Recomendado para revisões programadas.' },
+  30: { id: 30, name: 'Item-Gasket set - C3-4DES-4DC', img: '/assets/images/pecas-C3-4DES-4DC/1 - Gasket set.png', desc: 'Item compatível com diversos modelos.' },
+  33: { id: 33, name: 'Item-Gasket set - C3-4DES-4DC', img: '/assets/images/pecas-C3-4DES-4DC/1 - Gasket set.png', desc: 'Aplicação em compressores C4-4PES-10.' },
+  34: { id: 34, name: 'Item-Gasket set - C3-4DES-4DC', img: '/assets/images/pecas-C3-4DES-4DC/1 - Gasket set.png', desc: 'Ótima vedação e performance.' },
+  55: { id: 55, name: 'Item-Gasket set - C3-4DES-4DC', img: '/assets/images/pecas-C3-4DES-4DC/1 - Gasket set.png', desc: 'Peça original de reposição.' },
+  57: { id: 57, name: 'Item-Gasket set - C3-4DES-4DC', img: '/assets/images/pecas-C3-4DES-4DC/1 - Gasket set.png', desc: 'Instalação simples e rápida.' },
+  75: { id: 75, name: 'Item-Gasket set - C3-4DES-4DC', img: '/assets/images/pecas-C3-4DES-4DC/1 - Gasket set.png', desc: 'Confiabilidade comprovada.' }
 };
 
 (() => {
@@ -198,7 +198,7 @@ window.PRODUCT_CATALOG = {
     document.addEventListener('keydown',(e)=>{ if(e.key==='Escape'){ const p=document.querySelector(SELECTORS.cartPanel); if(p&&getComputedStyle(p).display!=='none'){ closeCart(); const cb=document.querySelector(SELECTORS.cartBtn); if(cb) cb.setAttribute('aria-expanded','false'); } } });
 
     const purchaseBtn=document.querySelector(SELECTORS.purchaseBtn);
-    if(purchaseBtn){ purchaseBtn.addEventListener('click',()=>{ alert('Ir para checkout… (implemente aqui)'); }); }
+    if(purchaseBtn){ purchaseBtn.addEventListener('click',()=>{ alert('Ir para checkout…'); }); }
 
     bindAddButtons(document);
   });
