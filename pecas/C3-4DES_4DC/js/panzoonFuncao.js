@@ -1,5 +1,4 @@
 
-
 /*===  Inicio section para arrastar livremente  === */
 document.addEventListener('DOMContentLoaded', function () {
     const image = document.getElementById('compressor-img');

@@ -8,7 +8,7 @@ section.table .content {
   top: var(--header-h, 80px);
   right: 0;
   width: 40%;
-  height: calc(100vh - var(--header-h, 80px)); /* ➜ Agora vai até o rodapé */
+  height: calc(100vh - var(--header-h, 80px));
   background: var(--cart-bg);
   color: var(--cart-fg);
   font-family: var(--cart-font);

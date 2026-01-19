@@ -1,105 +1,313 @@
 
-/* ===== Seção ocupa toda a tela ===== */
-section.about {
-  position: relative;
-  width: 100%;
-  height: 100vh; /* ocupa a tela inteira */
-  overflow: hidden;
-  margin: 0;
-  padding-top: 125px;
-}
+/* ================================
+   Painel off-canvas
+   ================================ */
 
-/* ===== Linha principal ===== */
-section.about .row {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-}
-
-/* ===== Painel da imagem (SVG) ocupa toda a tela ===== */
-section.about .svg-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-
-section.about .svg-wrapper svg {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* imagem cobre toda a área */
-}
-
-/* ===== Painel da tabela sobreposto à esquerda ===== */
-
-section.about .content {
-  position: absolute;
-  top: 0;
-  right: 0; /* Tabela fica à direita */
+section.table .content {
+  position: fixed !important;
+  top: var(--header-h, 80px);
+  right: 0;
   width: 40%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.95);
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  box-shadow: -2px 0 8px rgba(0,0,0,0.2); /* sombra invertida */
+  height: calc(100vh - var(--header-h, 80px));
+  background: var(--cart-bg);
+  color: var(--cart-fg);
+  font-family: var(--cart-font);
+  backdrop-filter: saturate(120%) blur(6px);
+  border-left: 1px solid var(--cart-border-strong);
+  z-index: 900;
+
+  box-shadow: -2px 0 8px rgba(0,0,0,0.2);
   overflow-y: auto;
+
+  padding: 45px 0 0 5px;
+  border-radius: 5px;
+
+  transform: translateX(100%);
   transition: transform 0.3s ease;
 }
 
-
-/* Quando fechado (JS adiciona classe .closed) */
-section.about .content.closed {
-  transform: translateX(-100%);
+/* Mostrar painel */
+section.table .content[style*="display: block"] {
+  transform: translateX(0);
 }
 
-/* ===== Tabela ===== */
-section.about .content .table-wrapper {
-  flex: 1;
-  padding: 16px;
-  overflow-y: auto;
+
+
+/* Mobile */
+@media (max-width: 900px) {
+  section.table .content { width: 100%; }
 }
+
+/* ================================
+   Variáveis do Tema
+   ================================ */
+
+:root {
+  --cart-font: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+
+  --cart-bg: #ffffff;
+  --cart-fg: #111827;
+  --cart-fg-muted: #374151;
+
+  --cart-border: #e5e7eb;
+  --cart-border-strong: #d1d5db;
+
+  --cart-row-zebra: #f9fafb;
+  --cart-row-hover: #f3f4f6;
+
+  --cart-primary: #2563eb;
+  --cart-danger: #e11d48;
+
+  --cart-radius-sm: 8px;
+  --cart-radius-md: 10px;
+
+  --cart-shadow-sm: 0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.04);
+
+  /* Paleta personalizada */
+  --cor-azul1: rgb(28, 54, 97);
+  --cor-azul2: rgb(70, 140, 188);
+  --cor-azul3: rgb(130, 206, 234);
+}
+
+/* ================================
+   TABELA
+   ================================ */
 
 .cart-table {
   width: 100%;
-  border-collapse: collapse;
-  font-size: 0.95rem;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: var(--cart-bg);
+  border: 1px solid var(--cart-border);
+  border-radius: var(--cart-radius-md);
+  box-shadow: var(--cart-shadow-sm);
+  overflow: hidden;
+}
+
+/* Cabeçalho */
+.cart-table thead {
+  background: var(--cor-azul1);
 }
 
 .cart-table thead th {
+  position: sticky;
+  top: 0;
+  background: var(--cor-azul1);
+  color: #ffffff;
   text-align: left;
-  font-weight: 600;
-  color: #6b7280;
-  border-bottom: 1px solid #e5e7eb;
-  padding: 10px 8px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  font-size: 0.9rem;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--cor-azul1);
+  z-index: 2;
 }
 
-.cart-table tbody td {
-  padding: 10px 8px;
-  border-bottom: 1px solid #f1f5f9;
+/* Linhas */
+.cart-table tbody tr {
+  transition: background-color .15s ease;
+}
+
+.cart-table tbody tr:nth-child(odd) {
+  background: var(--cart-row-zebra);
+}
+
+.cart-table tbody tr:hover {
+  background: var(--cart-row-hover);
+}
+
+/* Células */
+.cart-table td {
+  padding: 14px 16px;
   vertical-align: middle;
+  border-bottom: 1px solid var(--cart-border);
+  color: var(--cart-fg);
+  font-size: 0.95rem;
 }
 
-.cart-table tbody tr:nth-child(odd) { background: #f9fafb; }
+.cart-table tbody tr td:first-child {
+  font-weight: 600;
+  color: #0f172a;
+}
 
-.cart-table td img {
-  max-width: 80px;
-  max-height: 80px;
+.cart-table tbody tr td:last-child {
+  text-align: right;
+}
+
+/* Carrinho vazio */
+.cart-table tbody tr td[colspan="3"] {
+  text-align: center;
+  font-weight: 500;
+  color: var(--cart-fg-muted);
+  padding: 24px 16px;
+}
+
+/* ================================
+   Controles e Botões
+   ================================ */
+
+.cart-table td [style*="inline-flex"] {
+  gap: 10px !important;
+}
+
+.cart-table button {
+  appearance: none;
+  border: 1px solid var(--cart-border-strong);
+  background: #ffffff;
+  color: var(--cart-fg);
+  border-radius: var(--cart-radius-sm);
+  padding: 8px 12px;
+  font-weight: 600;
+  cursor: pointer;
+  line-height: 1;
+  box-shadow: 0 1px 0 rgba(0,0,0,.02);
+  transition: border-color .15s, background-color .15s, color .15s, transform .05s;
+}
+
+.cart-table button:hover {
+  background: #f8fafc;
+  border-color: var(--cart-border);
+}
+
+.cart-table button:active {
+  transform: translateY(1px);
+}
+
+.cart-table button:focus-visible,
+.cart-table input:focus-visible {
+  outline: 2px solid rgba(37, 99, 235, 0.55);
+  outline-offset: 2px;
+}
+
+/* Botões + e - */
+.cart-table button:where(:first-child),
+.cart-table button:where(:nth-child(3)) {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+}
+
+/* Remover */
+.cart-table button:nth-last-child(1) {
+  background: #fff0f2;
+  color: var(--cart-danger);
+  border-color: #fecdd3;
+}
+
+.cart-table button:nth-last-child(1):hover {
+  background: #ffe4e8;
+  border-color: #fda4af;
+}
+
+.cart-table button:nth-last-child(1):active {
+  background: #fed7df;
+}
+
+/* "Adicionando" animação */
+.add-product.adding {
+  animation: cart-bump .25s ease;
+}
+
+@keyframes cart-bump {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.06); }
+  100% { transform: scale(1); }
+}
+
+/* Input numérico */
+.cart-table input[type="number"] {
+  width: 72px;
+  height: 36px;
+  padding: 6px 8px;
+  border: 1px solid var(--cart-border-strong);
+  border-radius: var(--cart-radius-sm);
+  background: #ffffff;
+  color: var(--cart-fg);
+  font-weight: 600;
+  text-align: center;
+  -moz-appearance: textfield;
+}
+
+.cart-table input[type="number"]::-webkit-outer-spin-button,
+.cart-table input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+/* ================================
+   Imagens
+   ================================ */
+
+.cart-table td[data-label="Imagem"] {
+  width: 110px;
+  min-width: 110px;
+  text-align: right;
+}
+
+.cart-table td[data-label="Imagem"] img {
+  width: 80px;
+  height: 80px;
   object-fit: contain;
-  border-radius: 6px;
-  border: 1px solid #e5e7eb;
-  background: rgba(0,0,0,.03);
-  padding: 4px;
+  border-radius: 8px;
+  background: #f8fafc;
+  border: 1px solid var(--cart-border);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,.04);
+  transition: transform .15s, box-shadow .15s, border-color .15s;
 }
 
-/* ===== Responsividade ===== */
+.cart-table td[data-label="Imagem"] img:hover {
+  transform: scale(1.02);
+  border-color: var(--cart-border-strong);
+  box-shadow: 0 2px 6px rgba(0,0,0,.06);
+}
+
+/* ================================
+   Botão Finalizar Compra
+   ================================ */
+
+#purchaseButton.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 12px 0 4px 16px;
+  padding: 12px 16px;
+  border-radius: var(--cart-radius-md);
+  border: 1px solid transparent;
+  background: var(--cor-azul1);
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+#purchaseButton.btn:hover {
+  background: var(--cor-azul2);
+}
+
+/* ================================
+   Responsividade
+   ================================ */
+
 @media (max-width: 900px) {
-  section.about .content {
-    width: 100%; /* ocupa toda a tela no mobile */
-    height: 100%;
+  .cart-table thead th,
+  .cart-table td {
+    padding: 12px 14px;
+  }
+  .cart-table td[data-label="Imagem"] {
+    width: 88px;
+    min-width: 88px;
+  }
+  .cart-table td [style*="inline-flex"] {
+    gap: 8px !important;
+  }
+  .cart-table input[type="number"] {
+    width: 64px;
+  }
+}
+
+@media (max-width: 560px) {
+  .cart-table td:last-child {
+    text-align: left;
   }
 }

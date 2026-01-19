@@ -171,7 +171,6 @@ body{
 
 
 
-
 /* =========================
    FOOTER SECTION COMPLETO E RESPONSIVO
 ========================= */
@@ -307,6 +306,8 @@ body{
 
 
 
+
+
 .modal{
   display:none;
   position:fixed;
@@ -359,8 +360,6 @@ body{
   .btn-fechar:hover{
     background:#900
   }
-
-
 
 
 
