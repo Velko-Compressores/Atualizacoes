@@ -8,7 +8,7 @@ section.table .content {
   top: var(--header-h, 80px);
   right: 0;
   width: 40%;
-  height: calc(100vh - var(--header-h, 80px));
+  height: calc(100vh - var(--header-h, 80px)); /* ➜ Agora vai até o rodapé */
   background: var(--cart-bg);
   color: var(--cart-fg);
   font-family: var(--cart-font);
@@ -30,8 +30,6 @@ section.table .content {
 section.table .content[style*="display: block"] {
   transform: translateX(0);
 }
-
-
 
 /* Mobile */
 @media (max-width: 900px) {

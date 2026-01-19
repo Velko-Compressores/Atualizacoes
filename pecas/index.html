@@ -22,6 +22,7 @@
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cartStyle.css">
 
   <!-- Panzoom via CDN -->
   <script src="https://unpkg.com/@panzoom/panzoom/dist/panzoom.min.js" defer></script>
@@ -30,6 +31,7 @@
   <script src="js/avisoSoftwareBitzer.js" defer></script>
   <script src="js/panzoonFuncao.js" defer></script>
   <script src="js/menuResponsivo.js" defer></script>
+  <script src="js/cartFuncao.js" defer></script>
 
 </head>
 <body>
@@ -59,7 +61,36 @@
 <!-- Final Header Section  -->
 
 
-    <!-- Inicio container section -->
+
+<!-- Inicio Table Section  -->
+  <section class="table" id="table">
+    <div class="row">
+        <article class="content">
+          <div class="table-wrapper" role="region" aria-label="Tabela de itens">
+              <table class="cart-table" role="table">
+                  <thead>
+                      <tr>
+                          <th scope="col">Item</th>
+                          <th scope="col">Quantidade</th>
+                          <th scope="col">Imagem</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <!-- JS insere os itens aqui -->
+                  </tbody>
+              </table>
+          </div>
+          <button type="button" class="btn" id="purchaseButton" aria-label="Finalizar Compra">
+              Finalizar Compra
+          </button>
+        </article>
+    </div> <!-- Final div class row -->
+  </section> <!-- Final div class about -->
+
+
+
+
+<!-- Inicio container section -->
     <section class="home-pecas" id="home">
         <div class="content-pecas">
             <?xml version="1.0" encoding="UTF-8"?>
@@ -474,7 +505,7 @@
             </svg>
         </div>
     </section>
-    <!-- Final container section -->
+<!-- Final container section -->
 
 <!-- Inicio Botão Flutuante do WhatsApp -->
     <a href="https://wa.me/552125946544?text=Olá! Gostaria de saber mais sobre os produtos da Velko Compressores." 

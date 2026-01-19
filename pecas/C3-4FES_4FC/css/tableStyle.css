@@ -39,6 +39,7 @@ section.about .svg-wrapper svg {
 section.about .content {
   position: absolute;
   top: 0;
+    /* left: 0; Tabela fica à esquerda */
   right: 0; /* Tabela fica à direita */
   width: 40%;
   height: 100%;

@@ -22,6 +22,7 @@
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/cartStyle.css">
 
   <!-- Panzoom via CDN -->
   <script src="https://unpkg.com/@panzoom/panzoom/dist/panzoom.min.js" defer></script>
@@ -29,7 +30,8 @@
   <!-- custom js file link  -->
   <script src="assets/js/avisoSoftwareBitzer.js" defer></script>
   <script src="assets/js/menuResponsivo.js" defer></script>
-  <!-- <script src="assets/js/pageHome.js" defer></script> -->
+  <script src="assets/js/cartFuncao.js" defer></script>
+
 
 </head>
 <body>
@@ -60,6 +62,36 @@
 
 
 
+
+<!-- Inicio Table Section  -->
+  <section class="table" id="table">
+    <div class="row">
+        <article class="content">
+          <div class="table-wrapper" role="region" aria-label="Tabela de itens">
+              <table class="cart-table" role="table">
+                  <thead>
+                      <tr>
+                          <th scope="col">Item</th>
+                          <th scope="col">Quantidade</th>
+                          <th scope="col">Imagem</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <!-- JS insere os itens aqui -->
+                  </tbody>
+              </table>
+          </div>
+          <button type="button" class="btn" id="purchaseButton" aria-label="Finalizar Compra">
+              Finalizar Compra
+          </button>
+        </article>
+    </div> <!-- Final div class row -->
+  </section> <!-- Final div class about -->
+
+
+
+
+
 <!-- Inicio Home Section  -->
     <section class="home" id="home">
         <div class="content">
@@ -68,6 +100,9 @@
         </div>
     </section>
 <!-- Final Home section -->
+
+
+
 
 <!-- Inicio About Section  -->
     <section class="about" id="about">
