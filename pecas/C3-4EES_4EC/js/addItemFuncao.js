@@ -198,7 +198,13 @@ window.PRODUCT_CATALOG = {
     document.addEventListener('keydown',(e)=>{ if(e.key==='Escape'){ const p=document.querySelector(SELECTORS.cartPanel); if(p&&getComputedStyle(p).display!=='none'){ closeCart(); const cb=document.querySelector(SELECTORS.cartBtn); if(cb) cb.setAttribute('aria-expanded','false'); } } });
 
     const purchaseBtn=document.querySelector(SELECTORS.purchaseBtn);
-    if(purchaseBtn){ purchaseBtn.addEventListener('click',()=>{ alert('Ir para checkout…'); }); }
+      if (purchaseBtn) {
+        purchaseBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          openAuthModal(); // Abre o modal de login/cadastro
+        });
+      }
+
 
     bindAddButtons(document);
   });

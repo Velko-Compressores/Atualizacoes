@@ -23,6 +23,7 @@
     <!-- custom css file link  -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/tableStyle.css">
+    <link rel="stylesheet" href="css/modaLoginStyle.css">
 
     <!-- Panzoom via CDN -->
     <script src="https://unpkg.com/@panzoom/panzoom/dist/panzoom.min.js" defer></script>
@@ -32,6 +33,7 @@
     <script src="js/addItemFuncao.js" defer></script>
     <script src="js/menuResponsivo.js" defer></script>
     <script src="js/avisoSoftwareBitzer.js" defer></script>
+    <script src="js/modalFuncao.js" defer></script>
 
 </head>
 <body>
@@ -847,6 +849,52 @@
         </div>
     </div>
 <!-- === Final Modal de Avido Software Bitzer === -->
+
+
+
+
+<!-- === Inicio Modal Login/Cadastro ===-->
+<div id="auth-modal" style="display:none;">
+  <div class="auth-overlay"></div>
+      <button class="auth-close" aria-label="Fechar">X</button>
+  <div class="auth-dialog">
+
+    <div class="auth-tabs">
+      <button id="tab-login" class="auth-tab active">Entrar</button>
+      <button id="tab-register" class="auth-tab">Cadastrar</button>
+    </div>
+    <div class="auth-forms">
+
+      <!-- LOGIN -->
+      <form id="form-login" class="auth-form">
+        <label>E-mail<input type="email" required></label>
+        <label>Senha<input type="password" required></label>
+        <button type="submit" class="auth-btn-primary">Entrar</button>
+      </form>
+
+      <!-- CADASTRO -->
+      <form id="form-register" class="auth-form" style="display:none;">
+        <label>Nome<input type="text" required></label>
+        <label>E-mail<input type="email" required></label>
+        <label>Senha<input type="password" required></label>
+
+        <label>Telefone<input type="tel" required></label>
+        <label>CPF/CNPJ<input type="text" required></label>
+        <label>Endereço<input type="text" required></label>
+        <button type="submit" class="auth-btn-primary">Criar conta</button>
+      </form>
+
+    </div>
+  </div>
+</div>
+<!-- === Final Modal Login/Cadastro ===-->
+
+
+
+
+
+
+
 
 
 <!-- Inicio Footer Section  -->

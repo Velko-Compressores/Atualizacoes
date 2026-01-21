@@ -509,11 +509,13 @@
 
     // Botão de finalizar compra (placeholder)
     const purchaseBtn = document.querySelector(SELECTORS.purchaseBtn);
-    if (purchaseBtn) {
-      purchaseBtn.addEventListener('click', () => {
-        alert('Ir para checkout…');
-      });
-    }
+      if (purchaseBtn) {
+        purchaseBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          openAuthModal(); // Abre o modal de login/cadastro
+        });
+      }
+
 
     // Ativa os botões/links de adicionar produto
     bindAddButtons(document);
