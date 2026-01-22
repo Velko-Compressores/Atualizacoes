@@ -305,8 +305,9 @@ body{
 
 
 
-
-
+/* =========================
+   MODAL AVISO SOFTWARE BITZER
+========================= */
 
 .modal{
   display:none;
@@ -360,6 +361,9 @@ body{
   .btn-fechar:hover{
     background:#900
   }
+
+/* -- Final Modal Aviso Software Bitzer Section  -- */
+
 
 
 

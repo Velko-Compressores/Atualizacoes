@@ -332,13 +332,15 @@ body{
     transform: scale(1.1);
 }
 
-/* -- Final Botão Flutuante do WhatsApp Section Section  -- */
+/* -- Final Botão Flutuante do WhatsApp Section  -- */
 
 
 
 
 
-
+/* =========================
+   MODAL AVISO SOFTWARE BITZER
+========================= */
 
 .modal{
   display:none;
@@ -393,6 +395,6 @@ body{
     background:#900
   }
 
-
+/* -- Final Modal Aviso Software Bitzer Section  -- */
 
 
