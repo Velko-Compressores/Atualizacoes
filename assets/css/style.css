@@ -852,7 +852,7 @@ body{
 
 .contact {
   padding: 5rem 7%;
-  background-color: #f7f7f9;
+  background-color: #ffffff;
 }
 
 .contact .heading{
@@ -1070,9 +1070,6 @@ body{
   }
 }
 
-
-
-
 /* -- Final Contact Section  -- */
 
 
@@ -1212,8 +1209,7 @@ body{
     object-fit: contain;
 }
 
-
-
+/* Responsividade */
 
 @media (max-width: 768px) {
     .footer-content {
@@ -1222,10 +1218,6 @@ body{
         align-items: center;
     }
 }
-
-
-
-
 
 /* -- Final Footer Section  -- */
 
