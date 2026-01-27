@@ -212,3 +212,13 @@ window.PRODUCT_CATALOG = {
   // API debug (opcional)
   window.CartAPI={ getCart,setCart,addToCart,setItemQty,removeFromCart,clearCart,renderCart,openCart,closeCart,getCartCount };
 })();
+
+// Function Continuar Comprando
+document.getElementById("continueShoppingButton").addEventListener("click", function() {
+    window.location.href = "../index.html";
+});
+
+// Function Continuar Comprando
+document.getElementById("continueShoppingButton").addEventListener("click", function() {
+    window.location.href = "../index.html";
+});

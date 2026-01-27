@@ -205,10 +205,17 @@ window.PRODUCT_CATALOG = {
         });
       }
 
-
     bindAddButtons(document);
   });
 
   // API debug (opcional)
   window.CartAPI={ getCart,setCart,addToCart,setItemQty,removeFromCart,clearCart,renderCart,openCart,closeCart,getCartCount };
 })();
+
+
+// Function Continuar Comprando
+document.getElementById("continueShoppingButton").addEventListener("click", function() {
+    window.location.href = "../index.html";
+});
+
+

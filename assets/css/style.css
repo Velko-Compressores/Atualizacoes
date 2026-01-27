@@ -1077,11 +1077,9 @@ body{
    FOOTER SECTION COMPLETO E RESPONSIVO
 ========================= */
 
-
 .footer {
   padding: 5rem 7%;
   background-color: #f7f7f9;
-
 }
 
 .footer-content {
@@ -1130,7 +1128,6 @@ body{
 .footer-box p:hover {
     color: var(--cor-azul2);
 }
-
 
 .credit {
     text-align: center;
@@ -1193,7 +1190,6 @@ body{
     color: #0af;
     transform: translateX(3px);
 }
-
 
 .contact-item {
     display: flex;

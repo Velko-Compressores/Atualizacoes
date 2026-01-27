@@ -215,96 +215,148 @@ color:var(--cor-azul1);
 ========================= */
 
 .footer {
-  width: 100%;
-  background: var(--cor-branco);
-  border-top: 1px solid #e6e6ea5b;
-  padding: clamp(1.6rem, 1.2vw + 1.2rem, 2.4rem) 7%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: clamp(0.8rem, 1vw, 1.4rem);
+  padding: 5rem 7%;
+  background-color: #f7f7f9;
+
 }
 
-.footer .share {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: clamp(0.6rem, 1vw, 1rem);
-}
-
-.footer .share a {
-  width: clamp(36px, 3.2vw + 24px, 48px);
-  height: clamp(36px, 3.2vw + 24px, 48px);
-  border-radius: 999px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  color: var(--cor-branco);
-  background: var(--cor-azul1);
-  border: 1px solid rgba(0, 0, 0, 0.04);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
-
-  font-size: clamp(1.3rem, 0.8vw + 1rem, 1.6rem);
-  text-decoration: none;
-  transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.2s ease, opacity 0.2s ease;
-}
-
-.footer .share a:hover {
-  background: var(--cor-azul2);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.09);
-}
-
-.footer .share a:active {
-  transform: translateY(0);
-}
-
-.footer .share a:focus-visible {
-  outline: 3px solid rgba(42, 75, 150, 0.35);
-  outline-offset: 3px;
-}
-
-.footer .credit {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: clamp(0.5rem, 0.6vw, 0.8rem);
-  color: var(--cor-azul1);
-  font-size: clamp(1rem, 0.7vw + 0.9rem, 1.25rem);
-  font-weight: 600;
-  text-align: center;
-  line-height: 1.4;
-}
-
-.footer .credit span {
-  color: var(--cor-azul2);
-  opacity: 0.8;
-}
-
-
-   /* Responsividade */
-@media (max-width: 1300px) {
-  .footer {
-    padding: clamp(1.4rem, 1vw + 1rem, 2rem) 6%;
-    gap: clamp(0.7rem, 0.9vw, 1.2rem);
-  }
-}
-
-@media (max-width: 700px) {
-  .footer {
-    padding: 1.2rem 5%;
-    gap: 0.8rem;
-    border-top: none;
-  }
-  .footer .share {
-    gap: 0.6rem;
-  }
-  .footer .credit {
-    font-size: clamp(0.95rem, 0.6vw + 0.9rem, 1.1rem);
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
     flex-wrap: wrap;
-  }
 }
+
+.footer-box {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-box h3 {
+    color: var(--cor-azul1);
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.footer-box a {
+    color: var(--cor-azul1);
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 1.2rem;
+}
+
+.footer-box a:hover {
+    color: var(--cor-azul3);
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.footer-box p {
+    color: var(--cor-azul1);
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 1.2rem;
+}
+
+.footer-box p:hover {
+    color: var(--cor-azul2);
+}
+
+
+.credit {
+    text-align: center;
+    margin-top: 30px;
+    color: var(--cor-azul1);
+    font-size: 1.5rem;
+}
+
+.credit span {
+    color: var(--cor-azul2);
+}
+
+
+/* LINKS DE MAPA */
+.map-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 8px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 1.2rem;
+}
+
+.map-link img {
+    width: 29px;
+    height: 29px;
+    object-fit: contain;
+}
+
+.map-link:hover {
+    color: #0af;
+    transform: translateX(3px);
+}
+
+/* REDES SOCIAIS */
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-link img {
+    width: 21px;
+    height: 21px;
+    object-fit: contain;
+}
+
+.social-link:hover {
+    color: #0af;
+    transform: translateX(3px);
+}
+
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.contact-item img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+}
+
 /* -- Final Footer Section  -- */
+
 
 
 

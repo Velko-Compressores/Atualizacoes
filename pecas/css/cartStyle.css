@@ -1,45 +1,7 @@
-
-/* ================================
-   Painel off-canvas
-   ================================ */
-
-section.table .content {
-  position: fixed !important;
-  top: var(--header-h, 80px);
-  right: 0;
-  width: 40%;
-  height: calc(100vh - var(--header-h, 80px));
-  background: var(--cart-bg);
-  color: var(--cart-fg);
-  font-family: var(--cart-font);
-  backdrop-filter: saturate(120%) blur(6px);
-  border-left: 1px solid var(--cart-border-strong);
-  z-index: 900;
-
-  box-shadow: -2px 0 8px rgba(0,0,0,0.2);
-  overflow-y: auto;
-
-  padding: 45px 0 0 5px;
-  border-radius: 5px;
-
-  transform: translateX(100%);
-  transition: transform 0.3s ease;
-}
-
-/* Mostrar painel */
-section.table .content[style*="display: block"] {
-  transform: translateX(0);
-}
-
-/* Mobile */
-@media (max-width: 900px) {
-  section.table .content { width: 100%; }
-}
-
-/* ================================
-   Variáveis do Tema
-   ================================ */
-
+/* ============================================================
+   ROOT — Variáveis de Tema
+   Função: definir paleta, fonte, sombras e padrões gerais
+============================================================ */
 :root {
   --cart-font: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
 
@@ -61,16 +23,53 @@ section.table .content[style*="display: block"] {
 
   --cart-shadow-sm: 0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.04);
 
-  /* Paleta personalizada */
   --cor-azul1: rgb(28, 54, 97);
   --cor-azul2: rgb(70, 140, 188);
   --cor-azul3: rgb(130, 206, 234);
 }
 
-/* ================================
-   TABELA
-   ================================ */
 
+/* ============================================================
+   CLASS: .content  (section.table .content)
+   Função: painel lateral off‑canvas do carrinho
+============================================================ */
+section.table .content {
+  position: fixed !important;
+  top: var(--header-h, 80px);
+  right: 0;
+  width: 40%;
+  height: calc(100vh - var(--header-h, 80px));
+  background: var(--cart-bg);
+  color: var(--cart-fg);
+  font-family: var(--cart-font);
+  backdrop-filter: saturate(120%) blur(6px);
+  /* border-left: 1px solid var(--cart-border-strong); */
+  /* box-shadow: -2px 0 8px rgba(0,0,0,0.2); */
+  overflow-y: auto;
+  padding: 45px 0 0 5px;
+  border-radius: 5px;
+  z-index: 900;
+
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+
+/* Mostrar painel */
+section.table .content[style*="display: block"] {
+  transform: translateX(0);
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  section.table .content {
+    width: 100%;
+  }
+}
+
+/* ============================================================
+   CLASS: .cart-table
+   Função: tabela de itens do carrinho
+============================================================ */
 .cart-table {
   width: 100%;
   border-collapse: separate;
@@ -82,7 +81,7 @@ section.table .content[style*="display: block"] {
   overflow: hidden;
 }
 
-/* Cabeçalho */
+/* ===== Cabeçalho da tabela ===== */
 .cart-table thead {
   background: var(--cor-azul1);
 }
@@ -101,7 +100,7 @@ section.table .content[style*="display: block"] {
   z-index: 2;
 }
 
-/* Linhas */
+/* ===== Linhas da tabela ===== */
 .cart-table tbody tr {
   transition: background-color .15s ease;
 }
@@ -114,7 +113,7 @@ section.table .content[style*="display: block"] {
   background: var(--cart-row-hover);
 }
 
-/* Células */
+/* ===== Células ===== */
 .cart-table td {
   padding: 14px 16px;
   vertical-align: middle;
@@ -132,7 +131,7 @@ section.table .content[style*="display: block"] {
   text-align: right;
 }
 
-/* Carrinho vazio */
+/* ===== Mensagem carrinho vazio ===== */
 .cart-table tbody tr td[colspan="3"] {
   text-align: center;
   font-weight: 500;
@@ -140,10 +139,9 @@ section.table .content[style*="display: block"] {
   padding: 24px 16px;
 }
 
-/* ================================
-   Controles e Botões
-   ================================ */
-
+/* ============================================================
+   SUB-FUNÇÃO: controles & botões dentro da tabela
+============================================================ */
 .cart-table td [style*="inline-flex"] {
   gap: 10px !important;
 }
@@ -157,8 +155,8 @@ section.table .content[style*="display: block"] {
   padding: 8px 12px;
   font-weight: 600;
   cursor: pointer;
-  line-height: 1;
   box-shadow: 0 1px 0 rgba(0,0,0,.02);
+  line-height: 1;
   transition: border-color .15s, background-color .15s, color .15s, transform .05s;
 }
 
@@ -171,8 +169,7 @@ section.table .content[style*="display: block"] {
   transform: translateY(1px);
 }
 
-.cart-table button:focus-visible,
-.cart-table input:focus-visible {
+.cart-table button:focus-visible {
   outline: 2px solid rgba(37, 99, 235, 0.55);
   outline-offset: 2px;
 }
@@ -188,7 +185,7 @@ section.table .content[style*="display: block"] {
   font-size: 18px;
 }
 
-/* Remover */
+/* Remover item */
 .cart-table button:nth-last-child(1) {
   background: #fff0f2;
   color: var(--cart-danger);
@@ -204,7 +201,7 @@ section.table .content[style*="display: block"] {
   background: #fed7df;
 }
 
-/* "Adicionando" animação */
+/* Animação ao adicionar */
 .add-product.adding {
   animation: cart-bump .25s ease;
 }
@@ -215,7 +212,9 @@ section.table .content[style*="display: block"] {
   100% { transform: scale(1); }
 }
 
-/* Input numérico */
+/* ============================================================
+   SUB-FUNÇÃO: inputs numéricos
+============================================================ */
 .cart-table input[type="number"] {
   width: 72px;
   height: 36px;
@@ -226,7 +225,6 @@ section.table .content[style*="display: block"] {
   color: var(--cart-fg);
   font-weight: 600;
   text-align: center;
-  -moz-appearance: textfield;
 }
 
 .cart-table input[type="number"]::-webkit-outer-spin-button,
@@ -234,10 +232,9 @@ section.table .content[style*="display: block"] {
   -webkit-appearance: none;
 }
 
-/* ================================
-   Imagens
-   ================================ */
-
+/* ============================================================
+   SUB-FUNÇÃO: imagens da tabela
+============================================================ */
 .cart-table td[data-label="Imagem"] {
   width: 110px;
   min-width: 110px;
@@ -261,15 +258,14 @@ section.table .content[style*="display: block"] {
   box-shadow: 0 2px 6px rgba(0,0,0,.06);
 }
 
-/* ================================
-   Botão Finalizar Compra
-   ================================ */
-
+/* ============================================================
+   ID: #purchaseButton (Botão primário)
+   Função: Finalizar compra
+============================================================ */
 #purchaseButton.btn {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  margin: 12px 0 4px 16px;
   padding: 12px 16px;
   border-radius: var(--cart-radius-md);
   border: 1px solid transparent;
@@ -277,35 +273,61 @@ section.table .content[style*="display: block"] {
   color: #fff;
   font-weight: 700;
   letter-spacing: 0.2px;
+
+  margin: 0 !important; /* corrigir alinhamento */
 }
 
 #purchaseButton.btn:hover {
   background: var(--cor-azul2);
 }
 
-/* ================================
-   Responsividade
-   ================================ */
+/* ============================================================
+   ID: #continueShoppingButton (Botão secundário)
+   Função: Continuar comprando
+============================================================ */
+#continueShoppingButton.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-radius: var(--cart-radius-md);
+  border: 1px solid var(--cor-azul2);
+  background: #ffffff;
+  color: var(--cor-azul1);
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  box-shadow: var(--cart-shadow-sm);
+  transition: background-color .15s, color .15s, border-color .15s, transform .05s;
+  margin: 0 !important; /* corrigir alinhamento */
+}
 
-@media (max-width: 900px) {
-  .cart-table thead th,
-  .cart-table td {
-    padding: 12px 14px;
-  }
-  .cart-table td[data-label="Imagem"] {
-    width: 88px;
-    min-width: 88px;
-  }
-  .cart-table td [style*="inline-flex"] {
-    gap: 8px !important;
-  }
-  .cart-table input[type="number"] {
-    width: 64px;
-  }
+#continueShoppingButton.btn:hover {
+  background: #f8fafc;
+  color: var(--cor-azul3);
+  border-color: var(--cor-azul3);
+}
+
+#continueShoppingButton.btn:active {
+  transform: translateY(1px);
+}
+
+/* ============================================================
+   CLASS: .cart-actions
+   Função: contêiner dos botões
+============================================================ */
+.cart-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px;
+  margin-top: 8px;
+  flex-wrap: wrap;
 }
 
 @media (max-width: 560px) {
-  .cart-table td:last-child {
-    text-align: left;
+  .cart-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
   }
 }

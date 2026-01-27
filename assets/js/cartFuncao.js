@@ -549,3 +549,9 @@
     }
   };
 })();
+
+// Function Continuar Comprando
+document.getElementById("continueShoppingButton").addEventListener("click", function() {
+    window.location.href = "pecas/index.html";
+});
+
