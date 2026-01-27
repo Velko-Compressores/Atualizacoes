@@ -172,6 +172,45 @@ body{
 
 
 /* =========================
+   HEADING COMPLETO E RESPONSIVO
+========================= */
+.heading-section {
+  padding-top: 125px;
+  color: var(--cor-azul1);
+  text-transform: uppercase;
+}
+
+.heading {
+padding-left: 100px;
+color:var(--cor-azul1);
+  font-size: 3rem;
+}
+
+.heading span {
+  color:var(--cor-azul2);
+}
+/* -- Final Heading Section  -- */
+
+
+/* =========================
+   COMPRESSOR-IMG COMPLETO E RESPONSIVO
+========================= */
+
+.svg-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#compressor-img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* -- Final Compressor-img Section  -- */
+
+
+/* =========================
    FOOTER SECTION COMPLETO E RESPONSIVO
 ========================= */
 

@@ -301,7 +301,7 @@ body{
     text-align: center;
     color:var(--cor-azul1);
     text-transform: uppercase;
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 .about .heading span{
@@ -353,7 +353,7 @@ body{
 /* Responsividade */
 @media (max-width: 1700px) {
     .about .heading{
-        font-size: 3.5rem;
+        font-size: 3rem;
     }
     .about .row .image img{
         width: 40rem;
@@ -433,7 +433,7 @@ body{
     text-align: center;
     color:var(--cor-azul1);
     text-transform: uppercase;
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 .blogs .heading span{
@@ -511,7 +511,7 @@ body{
 /* Responsividade */
 @media (max-width: 1700px) {
   .blogs .heading {
-   font-size: 3.5rem;
+   font-size: 3rem;
   }
 }
 
@@ -576,7 +576,7 @@ body{
   text-align: center;
   color: var(--cor-azul1);
   text-transform: uppercase;
-  font-size: 4rem;
+  font-size: 3rem;
   padding-bottom: 4rem;
 }
 
@@ -662,7 +662,7 @@ body{
 /* Responsividade */
 @media (max-width: 1700px) {
   .products .heading {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 
   .products .box-container {
@@ -762,7 +762,7 @@ body{
     text-align: center;
     color:var(--cor-azul1);
     text-transform: uppercase;
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 .software .heading span{
@@ -779,7 +779,7 @@ body{
 /* Responsividade */
 @media (max-width: 1700px) {
   .software .heading {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 }
 
@@ -859,7 +859,7 @@ body{
   text-align: center;
   color:var(--cor-azul1);
   text-transform: uppercase;
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .contact .heading span{
@@ -984,7 +984,7 @@ body{
 /* Responsividade */
 @media (max-width: 1700px) {
   .contact .heading {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 }
 
