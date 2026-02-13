@@ -16,15 +16,16 @@
     --cor-dourado:rgb(204, 204, 204);
 }
 
-
-
-/* BACKDROP */
+/* =============== BACKDROP =============== */
 #auth-modal {
   position: fixed;
   inset: 0;
   z-index: 99999;
-  display: none;
+  display: none;                 /* visibilidade controlada por classe */
 }
+#auth-modal.is-open { display: block; }
+
+body.modal-open { overflow: hidden; }
 
 #auth-modal .auth-overlay {
   position: absolute;
@@ -33,7 +34,7 @@
   backdrop-filter: blur(1px);
 }
 
-/* MODAL CENTRALIZADO FIXO */
+/* =============== DIALOG CENTRALIZADO =============== */
 #auth-modal .auth-dialog {
   position: fixed;
   top: 50%;
@@ -52,7 +53,7 @@
   animation: fadeIn .25s ease, slideUp .25s ease;
 }
 
-/* CLOSE BUTTON */
+/* =============== BOTÃO FECHAR =============== */
 .auth-close {
   position: absolute;
   top: 10px;
@@ -62,11 +63,11 @@
   font-size: 26px;
   font-weight: bold;
   cursor: pointer;
-  color: #ffffff;
+  color: #ffffff;               /* OBS: se quiser melhor contraste no fundo branco, troque para #111 */
 }
 .auth-close:hover { color: #000; }
 
-/* TABS */
+/* =============== TABS =============== */
 .auth-tabs {
   display: flex;
   gap: 8px;
@@ -87,10 +88,17 @@
 .auth-tab.active {
   background: var(--cor-azul1);
   color: #fff;
-  border-color:var(--cor-azul1);
+  border-color: var(--cor-azul1);
 }
 
-/* FORM */
+/* =============== FORMS =============== */
+.auth-form {
+  display: none;               /* visibilidade por classe */
+}
+.auth-form.is-active {
+  display: block;
+}
+
 .auth-form label {
   display: block;
   margin-bottom: 12px;
@@ -110,7 +118,7 @@
   box-shadow: 0 0 0 2px rgba(37, 99, 235, .2);
 }
 
-/* BUTTON */
+/* =============== BOTÃO PRIMÁRIO =============== */
 .auth-btn-primary {
   width: 100%;
   padding: 12px;
@@ -126,7 +134,7 @@
   background: var(--cor-azul2);
 }
 
-/* ANIMAÇÕES */
+/* =============== ANIMAÇÕES =============== */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -136,7 +144,7 @@
   to { transform: translate(-50%, -50%); }
 }
 
-/* MOBILE */
+/* =============== MOBILE =============== */
 @media (max-width: 420px) {
   #auth-modal .auth-dialog { padding: 16px; }
   .auth-tab { padding: 8px; }

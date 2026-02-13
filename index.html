@@ -22,8 +22,8 @@
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/cartStyle.css">
-    <link rel="stylesheet" href="assets/css/modaLoginStyle.css">
+    <link rel="stylesheet" href="assets/css/carrinhoCompra.css">
+    <link rel="stylesheet" href="assets/css/modaLogin.css">
 
     <!-- Panzoom via CDN -->
     <script src="https://unpkg.com/@panzoom/panzoom/dist/panzoom.min.js" defer></script>
@@ -31,8 +31,8 @@
     <!-- custom js file link  -->
     <script src="assets/js/avisoSoftwareBitzer.js" defer></script>
     <script src="assets/js/menuResponsivo.js" defer></script>
-    <script src="assets/js/cartFuncao.js" defer></script>
-    <script src="assets/js/modaLoginFuncao.js" defer></script>
+    <script src="assets/js/carrinhoCompra.js" defer></script>
+    <script src="assets/js/modaLogin.js" defer></script>
 
 
 </head>
@@ -66,28 +66,28 @@
   <section class="table" id="table">
     <div class="row">
         <article class="content">
-          <div class="table-wrapper" role="region" aria-label="Tabela de itens">
-              <table class="cart-table" role="table">
-                  <thead>
-                      <tr>
-                          <th scope="col">Item</th>
-                          <th scope="col">Quantidade</th>
-                          <th scope="col">Imagem</th>
-                      </tr>
-                  </thead>
-                  <tbody>
-                      <!-- JS insere os itens aqui -->
-                  </tbody>
-              </table>
-          </div>
-        <div class="cart-actions" role="group" aria-label="Ações do carrinho">
-            <button type="button" class="btn" id="purchaseButton" aria-label="Finalizar Compra">
-              Finalizar Compra
-            </button>
-            <button type="button" class="btn" id="continueShoppingButton" aria-label="Continuar Comprando">
-              Continuar Comprando
-            </button>
-        </div>
+            <div class="table-wrapper" role="region" aria-label="Tabela de itens">
+                <table class="cart-table" role="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Item</th>
+                            <th scope="col">Quantidade</th>
+                            <th scope="col">Imagem</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- JS insere os itens aqui -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="cart-actions" role="group" aria-label="Ações do carrinho">
+                <button type="button" class="btn" id="purchaseButton" aria-label="Finalizar Compra">
+                    Finalizar Compra
+                </button>
+                <button type="button" class="btn" id="continueShoppingButton" aria-label="Continuar Comprando">
+                    Continuar Comprando
+                </button>
+            </div>
         </article>
     </div> <!-- Final div class row -->
   </section> <!-- Final div class about -->
@@ -224,13 +224,6 @@
 
         <a class="box" href="compressor-remanufaturado/index.html">
             <div class="content">
-                <!-- <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div> -->
                 <h3>COMPRESSOR REMANUFATURADO</h3>
                 <div class="image">
                     <img src="assets/images/comRemanufaturado.png" alt="Imagem Compressor Remanufaturado">
@@ -240,13 +233,6 @@
 
         <a class="box" href="pecas/index.html">
             <div class="content">
-                <!-- <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div> -->
                 <h3>PEÇAS</h3>
                 <div class="image">
                     <img src="assets/images/comPecas.png" alt="imagem peças">
@@ -256,13 +242,6 @@
 
         <a class="box" href="#products">
             <div class="content">
-                <!-- <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div> -->
                 <h3>COMPRESSOR ALTERNATIVO NOVO</h3>
                 <div class="image">
                     <img src="assets/images/comAlternativo.png" alt="Imagem Compressor Alternativo">
@@ -272,13 +251,6 @@
 
         <a class="box" href="compressor-parafuso/index.html">
             <div class="content">
-                <!-- <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div> -->
                 <h3>COMPRESSOR DE PARAFUSO</h3>
                 <div class="image">
                     <img src="assets/images/comParafuso.png" alt="Imagem Compressor Parafuso">
@@ -289,31 +261,6 @@
     </div>
 </section>
 <!-- Final Products Section -->
-
-
-<!-- Inicio Software Section -->
-    <!-- <section class="software" id="software">
-        <h1 class="heading"> <span>Teste a </span> Ferramenta BITZER </h1>
-            <div class="container">
-                <iframe 
-                    src="https://www.bitzer.de/websoftware" 
-                    title="BITZER Selection Software"
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                    allow="fullscreen">
-                </iframe>
-                <noscript>
-                    <p>Seu navegador precisa de JavaScript habilitado. 
-                    <a href="https://www.bitzer.de/websoftware" target="_blank" rel="noopener">Abrir em nova aba</a>.</p>
-                </noscript>
-            </div>
-
-            <h3> Clique <span>
-                <a href="https://www.bitzer.de/shared_media/files/BITZER-Software_7.1.1-2_x64-setup.exe">AQUI</a>
-                </span> para baixar a Ferramenta BITZER.
-            </h3>
-    </section> -->
-<!-- Final Software Section -->
 
 
 <!-- === Inicio Modal de Avido Software Bitzer === -->
@@ -328,30 +275,27 @@
     </div>
 <!-- === Final Modal de Avido Software Bitzer === -->
 
-
-
-
 <!-- === Inicio Modal Login/Cadastro ===-->
-<div id="auth-modal" style="display:none;">
+<div id="auth-modal">
   <div class="auth-overlay"></div>
-      <button class="auth-close" aria-label="Fechar">X</button>
-  <div class="auth-dialog">
+  <button class="auth-close" aria-label="Fechar">X</button>
 
+  <div class="auth-dialog">
     <div class="auth-tabs">
       <button id="tab-login" class="auth-tab active">Entrar</button>
       <button id="tab-register" class="auth-tab">Cadastrar</button>
     </div>
-    <div class="auth-forms">
 
+    <div class="auth-forms">
       <!-- LOGIN -->
-      <form id="form-login" class="auth-form">
+      <form id="form-login" class="auth-form is-active">
         <label>E-mail<input type="email" required></label>
         <label>Senha<input type="password" required></label>
         <button type="submit" class="auth-btn-primary">Entrar</button>
       </form>
 
       <!-- CADASTRO -->
-      <form id="form-register" class="auth-form" style="display:none;">
+      <form id="form-register" class="auth-form">
         <label>Nome<input type="text" required></label>
         <label>E-mail<input type="email" required></label>
         <label>Senha<input type="password" required></label>
@@ -361,11 +305,11 @@
         <label>Endereço<input type="text" required></label>
         <button type="submit" class="auth-btn-primary">Criar conta</button>
       </form>
-
     </div>
   </div>
 </div>
 <!-- === Final Modal Login/Cadastro ===-->
+
 
 
 
@@ -408,9 +352,6 @@
 </section>
 <!-- Final Contact Section -->
 
-
-
-
 <!-- Inicio Botão Flutuante do WhatsApp -->
     <a href="https://wa.me/552125946544?text=Olá! Gostaria de saber mais sobre os produtos da Velko Compressores." 
         class="whatsapp-float" 
@@ -420,24 +361,7 @@
     </a>
 <!-- Fim Botão Flutuante do WhatsApp -->
 
-
 <!-- Inicio Footer Section  -->
-    <!-- <section class="footer">
-        <div class="share">
-            <a href="#" class="fab fa-facebook-f"></a>
-            <a href="#" class="fab fa-instagram"></a>
-            <a href="#" class="fab fa-linkedin"></a>
-        </div>
-        <div class="credit">Velko Compressores Ltda <span>| all rights reserved</span> </div>
-    </section> -->
-<!-- Final Footer Section  -->
-
-
-
-
-
-<!-- Inicio Footer Section  -->
- 
 <section class='footer'>
     <div class='footer-content'>
 
@@ -458,7 +382,6 @@
             <p class='icon-text'>Seg. a Sex.:</p>
             <p class='icon-text'>08:00 às 12:00 e 13:00 às 17:45</p>
         </div>
-
 
         <!-- 3) ENDEREÇO -->
         <div class='footer-box'>
@@ -505,8 +428,6 @@
 </section>
 
 <!-- Final Footer Section  -->
-
-
 
 
 </body>

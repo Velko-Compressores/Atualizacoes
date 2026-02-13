@@ -199,8 +199,6 @@ body{
 /* -- Final Header Section  -- */
 
 
-
-
 /* =========================
    HEADING COMPLETO E RESPONSIVO
 ========================= */
@@ -223,6 +221,16 @@ body{
 .heading span {
   color:var(--cor-azul2);
 }
+
+/* Responsividade */
+
+@media (max-width: 575px) {
+
+  .heading-section h2 {
+      font-size: 2rem;
+  }
+}
+
 /* -- Final Heading Section  -- */
 
 
@@ -230,18 +238,6 @@ body{
 /*-----------------------------------*\
  * #REUSED STYLE RELEVANTE
 \*-----------------------------------*/
-
-/* .product .heading{
-    text-align: center;
-    color:var(--cor-azul1);
-    text-transform: uppercase;
-    font-size: 3rem;
-}
-
-.product .heading span{
-    color:var(--cor-azul2);
-    text-transform: uppercase;
-}  */
 
 li { list-style: none; }
 .container { padding-inline: 15px; }
@@ -330,10 +326,6 @@ li { list-style: none; }
 /* >= 575px */
 @media (min-width: 575px) {
 
-  .product .heading{
-      font-size: 2.3rem;
-  }
-
   .container {
     max-width: 650px;
     width: 100%;
@@ -343,15 +335,11 @@ li { list-style: none; }
   .product-list { 
     grid-template-columns: 1fr 1fr; 
   }
-
 }
 
 
 /* >= 768px */
 @media (min-width: 768px) {
-  :root {
-    --fs-2: 3rem; /* h2 maior em telas médias */
-  }
 
   .container { max-width: 720px; }
 }
@@ -360,47 +348,24 @@ li { list-style: none; }
 @media (min-width: 992px) {
 
   .container { max-width: 970px; }
-
   .product-list { grid-template-columns: repeat(3, 1fr); }
 }
 
 /* >= 1200px */
 @media (min-width: 1200px) {
 
-    .product .heading{
-      font-size: 2.3rem;
-  }
-  :root {
-    --fs-2: 3.6rem; /* h2 ainda maior em desktop grande */
-  }
-
   .container { max-width: 1280px; }
-
   .product-list { grid-template-columns: repeat(4, 1fr); }
 }
-
-@media (max-width: 600px) {
-
-    .product .heading{
-        font-size: 1.9rem;
-    }
-
-}
-
-
-
-
 
 
 /* =========================
    FOOTER SECTION COMPLETO E RESPONSIVO
 ========================= */
 
-
 .footer {
   padding: 5rem 7%;
   background-color: #f7f7f9;
-
 }
 
 .footer-content {
