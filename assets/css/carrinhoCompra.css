@@ -323,9 +323,9 @@ section.table .table-wrapper {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 10px;
+  padding-bottom: 50px;
   margin-top: 8px;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
 
 /* ============================================================
@@ -393,10 +393,116 @@ section.table .table-wrapper {
 
 
 
+/* ------------------------------------------------------------
+   Reduz 5% os itens internos da TABELA em telas < 500px
+   Mantém o painel no lugar e alinha pelo lado direito.
+------------------------------------------------------------ */
+/* ------------------------------------------------------------
+   Telas < 500px: painel centralizado e entrada pela direita
+   + conteúdo ~5% menor
+------------------------------------------------------------ */
+@media (max-width: 500px) {
+  /* Painel do carrinho centralizado quando aberto */
+  section.table .content {
+    position: fixed !important;
+    top: var(--header-h, 110px);
+
+    /* Centralização horizontal do painel */
+    left: 50%;
+    right: auto;
+
+    /* Largura fluida e segura em mobile */
+    width: min(92vw, 350px);
+    min-width: unset;
+    max-width: min(92vw, 350px);
+
+    /* Altura limitada pelo header */
+    height: calc(100vh - var(--header-h, 80px));
+
+    /* FECHADO: fora da tela pela direita (anima em X) */
+    transform: translate3d(calc(-50% + 120vw), 0, 0);
+    will-change: transform;
+    transition: transform 0.3s ease;
+
+    /* opcional: um pouco menos de padding no mobile */
+    padding: 8px 6px;
+  }
+
+  /* ABERTO: centralizado no viewport */
+  section.table .content.is-open {
+    transform: translate3d(-50%, 0, 0);
+  }
+
+  /* Centraliza os botões dentro do painel */
+  .carte .cart-actions {
+    justify-content: center;
+    
+  }
+
+  /* ===========================
+     Ajustes de densidade (~5%)
+     =========================== */
+
+  /* Cabeçalho da tabela mais compacto */
+  .cart-table thead th {
+    font-size: 1.135rem; /* ~5% menor que 1.3rem */
+    padding: 9.5px 9.5px;
+  }
+
+  /* Células base mais compactas */
+  .cart-table td {
+    padding: 7.6px 9.5px; /* ~5% menor */
+  }
+
+  /* Colunas recalibradas para caber melhor */
+  .cart-table thead th:nth-child(1),
+  .cart-table tbody td:nth-child(1) {
+    width: auto;
+    white-space: normal;
+    word-break: break-word;
+  }
+  .cart-table thead th:nth-child(2),
+  .cart-table tbody td:nth-child(2) {
+    width: 140px; /* Quantidade */
+  }
+  .cart-table thead th:nth-child(3),
+  .cart-table tbody td:nth-child(3) {
+    width: 90px;  /* Imagem */
+  }
+
+  /* Inputs e botões ligeiramente menores (~5%) */
+  .cart-table input[type="number"] {
+    width: 53px;
+    height: 26.6px;
+    padding: 3.8px 5.7px;
+    font-size: 0.8075rem;
+  }
+  .cart-table button {
+    padding: 5.7px 7.6px;
+    min-height: 26.6px;
+    font-size: 0.8075rem;
+  }
+  .qty-controls > button:first-child,
+  .qty-controls > button:nth-child(3),
+  .cart-table .btn-remove,
+  .cart-table .btn-icon {
+    width: 26.6px;
+    height: 26.6px;
+  }
+  .cart-table .btn-icon i {
+    font-size: 13.3px;
+    line-height: 1;
+  }
+
+  /* Imagem ligeiramente menor (~5%) */
+  .cart-table td[data-label="Imagem"] img {
+    width: 45.6px;
+    height: 45.6px;
+    border-radius: 5.7px;
+  }
 
 
 
-
-
+}
 
 
