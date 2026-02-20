@@ -424,7 +424,7 @@
     if (continueBtn) {
       continueBtn.addEventListener('click', (e) => {
         e.preventDefault();
-        window.location.href = 'pecas/index.html';
+        window.location.href = 'pecas.html';
       });
     }
 

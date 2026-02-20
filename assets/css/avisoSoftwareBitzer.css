@@ -1,0 +1,160 @@
+
+/* =========================
+   MODAL AVISO SOFTWARE BITZER
+========================= */
+
+.modal{
+  display:none;
+  position:fixed;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.65);
+  z-index:1000
+}
+  .modal-conteudo{
+    background:#fff;
+    width:90%;
+    max-width:500px;
+    margin:8% auto;
+    padding:25px;
+    border-radius:12px;
+    text-align:center;
+    animation:fadeIn .35s
+  }
+  @keyframes fadeIn{from{
+    opacity:0;
+    transform:scale(.9)}to{
+      opacity:1;
+      transform:scale(1)}
+    }
+  .btn-modal{
+    display:block;
+    background:#0c7a3d;
+    color:#fff;
+    padding:12px;
+    border-radius:8px;
+    margin:10px 0;
+    font-size:17px;
+    text-decoration:none
+  }
+  .btn-modal:hover{
+    background:#0a6131
+  }
+  .btn-fechar{
+    background:#b30000;
+    color:#fff;
+    padding:10px 20px;
+    border-radius:6px;
+    border:none;
+    margin-top:15px;
+    cursor:pointer;
+    font-size:16px
+  }
+  .btn-fechar:hover{
+    background:#900
+  }
+
+/* -- Final Modal Aviso Software Bitzer Section  -- */
+
+
+
+
+
+/* =========================
+   WEBSOFTWARE SECTION COMPLETO E RESPONSIVO
+========================= */
+
+.software, .software * {
+  box-sizing: border-box;
+}
+
+.software {
+  padding: 5rem 7%;
+}
+
+.software .heading{
+    text-align: center;
+    color:var(--cor-azul1);
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+
+.software .heading span{
+    color:var(--cor-azul2);
+    text-transform: uppercase;
+}
+
+.software iframe {
+    width: 100%;
+    height: 80vh;
+    border: none;
+}
+
+/* Responsividade */
+@media (max-width: 1700px) {
+  .software .heading {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 1300px) {
+
+  .software .heading {
+    font-size: 2.5rem; 
+  }
+  .software .row {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+    padding: 0;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  .software .row .map, .software .row form {
+    border-radius: 0;
+    height: clamp(320px, 48vh, 500px);
+  }
+
+  .software .row .map iframe { 
+    width: 100%; height: 100%; object-fit: cover; 
+  }
+
+  .software.row form {
+    padding: clamp(0.8rem, 1vw + 0.5rem, 1.1rem);
+    gap: clamp(0.35rem, 0.5vw, 0.6rem);
+  }
+
+  .software .row form h3 {
+    font-size: clamp(1.15rem, 0.85vw + 1rem, 1.5rem);
+  }
+
+}
+
+
+@media (max-width: 700px) {
+  .software { 
+    padding: 2rem 5%; 
+  }
+  .software .heading { 
+    font-size: 1.9rem; 
+    margin-bottom: 1rem; 
+  }
+
+  .software .row .map,
+  .software .row form {
+    height: clamp(300px, 46vh, 420px);
+  }
+  .software .row form {
+    padding: clamp(0.7rem, 0.9vw + 0.45rem, 1rem);
+    gap: clamp(0.3rem, 0.45vw, 0.5rem);
+  }
+  .software .row form h3 {
+    font-size: clamp(1.1rem, 0.8vw + 0.95rem, 1.35rem);
+  }
+
+}
+/* -- Final Contact Section  -- */
+
+

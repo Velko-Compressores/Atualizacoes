@@ -1,0 +1,145 @@
+
+/* =========================
+   FOOTER SECTION COMPLETO E RESPONSIVO
+========================= */
+
+.footer {
+  padding: 5rem 7%;
+  background-color: #f7f7f9;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-box {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-box h3 {
+    color: var(--cor-azul1);
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.footer-box a {
+    color: var(--cor-azul1);
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 1.2rem;
+}
+
+.footer-box a:hover {
+    color: var(--cor-azul3);
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.footer-box p {
+    color: var(--cor-azul1);
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 1.2rem;
+}
+
+.footer-box p:hover {
+    color: var(--cor-azul2);
+}
+
+.credit {
+    text-align: center;
+    margin-top: 30px;
+    color: var(--cor-azul1);
+    font-size: 1.5rem;
+}
+
+.credit span {
+    color: var(--cor-azul2);
+}
+
+
+/* LINKS DE MAPA */
+.map-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 8px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 1.2rem;
+}
+
+.map-link img {
+    width: 29px;
+    height: 29px;
+    object-fit: contain;
+}
+
+.map-link:hover {
+    color: #0af;
+    transform: translateX(3px);
+}
+
+/* REDES SOCIAIS */
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-link img {
+    width: 21px;
+    height: 21px;
+    object-fit: contain;
+}
+
+.social-link:hover {
+    color: #0af;
+    transform: translateX(3px);
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.contact-item img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+/* -- Final Footer Section  -- */
+

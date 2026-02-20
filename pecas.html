@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Velko Compressores - Peças</title>
+    <title>Velko Compressores - Home</title>
 
     <!-- Meta tags e links aqui -->
     <meta name="og:title" content="Velko-Compressores">
@@ -13,27 +13,32 @@
     <meta name="og:url" content="https://velko-compressores.github.io/Velko-Compressores">
 
     <!-- Favicons -->
-    <link href="images/favicon.png" rel="icon">
-    <link href="images/favicon.png" rel="apple-touch-icon">
+
+    <link href="assets/images/favicon.png" rel="icon">
+    <link href="assets/images/favicon.png" rel="apple-touch-icon">
 
     <!-- Link font awesome  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/cartStyle.css">
-    <link rel="stylesheet" href="css/modaLoginStyle.css">
+     <link rel="stylesheet" href="assets/css/root.css">
+    <link rel="stylesheet" href="assets/css/tabelaPecas.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/carrinhoCompra.css">
+    <link rel="stylesheet" href="assets/css/modaLogin.css">
+    <link rel="stylesheet" href="assets/css/whatsapp.css">
+    <link rel="stylesheet" href="assets/css/avisoSoftwareBitzer.css">
 
     <!-- Panzoom via CDN -->
     <script src="https://unpkg.com/@panzoom/panzoom/dist/panzoom.min.js" defer></script>
 
     <!-- custom js file link  -->
-    <script src="js/avisoSoftwareBitzer.js" defer></script>
-    <script src="js/panzoonFuncao.js" defer></script>
-    <script src="js/menuResponsivo.js" defer></script>
-    <script src="js/cartFuncao.js" defer></script>
-    <script src="js/modaLoginFuncao.js" defer></script>
+    <script src="assets/js/avisoSoftwareBitzer.js" defer></script>
+    <script src="assets/js/menuResponsivo.js" defer></script>
+    <script src="assets/js/carrinhoCompra.js" defer></script>
+    <script src="assets/js/modaLogin.js" defer></script>
 
 </head>
 <body>
@@ -41,15 +46,15 @@
 <!-- Inicio Header Section  -->
     <header class="header">
         <a href="#" class="logo">
-            <img src="images/Logotipo_Velko.svg" alt="Logotipo da empresa">
+            <img src="assets/images/Logotipo_Velko.svg" alt="Logotipo da empresa">
         </a>
         <nav class="navbar" aria-label="Menu principal">
             <ul>
-                <li><a href="../index.html">HOME</a></li>
-                <li><a href="../index.html#about">SOBRE</a></li>
-                <li><a href="../index.html#blogs">SERVIÇOS</a></li>
-                <li><a href="../index.html#products">PRODUTOS</a></li>
-                <li><a href="../index.html#contact">CONTATO</a></li>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="index.html#about">SOBRE</a></li>
+                <li><a href="index.html#blogs">SERVIÇOS</a></li>
+                <li><a href="index.html#products">PRODUTOS</a></li>
+                <li><a href="index.html#contact">CONTATO</a></li>
                  <li><a href='#' id='abrirModalSoftware'>BITZER SOFTWARE</a></li>
             </ul>
         </nav>
@@ -62,37 +67,36 @@
 <!-- Final Header Section  -->
 
 
-
 <!-- Inicio Table Section  -->
   <section class="table" id="table">
     <div class="row">
         <article class="content">
-          <div class="table-wrapper" role="region" aria-label="Tabela de itens">
-              <table class="cart-table" role="table">
-                  <thead>
-                      <tr>
-                          <th scope="col">Item</th>
-                          <th scope="col">Quantidade</th>
-                          <th scope="col">Imagem</th>
-                      </tr>
-                  </thead>
-                  <tbody>
-                      <!-- JS insere os itens aqui -->
-                  </tbody>
-              </table>
-          </div>
-        <div class="cart-actions" role="group" aria-label="Ações do carrinho">
-            <button type="button" class="btn" id="purchaseButton" aria-label="Finalizar Compra">
-              Finalizar Compra
-            </button>
-            <button type="button" class="btn" id="continueShoppingButton" aria-label="Continuar Comprando">
-              Continuar Comprando
-            </button>
-        </div>
+            <div class="table-wrapper" role="region" aria-label="Tabela de itens">
+                <table class="cart-table" role="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Item</th>
+                            <th scope="col">Quantidade</th>
+                            <th scope="col">Imagem</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- JS insere os itens aqui -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="cart-actions" role="group" aria-label="Ações do carrinho">
+                <button type="button" class="btn" id="purchaseButton" aria-label="Finalizar Compra">
+                    Finalizar Compra
+                </button>
+                <button type="button" class="btn" id="continueShoppingButton" aria-label="Continuar Comprando">
+                    Continuar Comprando
+                </button>
+            </div>
         </article>
     </div> <!-- Final div class row -->
   </section> <!-- Final div class about -->
-
+<!-- Final Table Section  -->
 
 
 
@@ -617,28 +621,27 @@
 <!-- === Final Modal de Avido Software Bitzer === -->
 
 
-
 <!-- === Inicio Modal Login/Cadastro ===-->
-<div id="auth-modal" style="display:none;">
+<div id="auth-modal">
   <div class="auth-overlay"></div>
-      <button class="auth-close" aria-label="Fechar">X</button>
-  <div class="auth-dialog">
+  <button class="auth-close" aria-label="Fechar">X</button>
 
+  <div class="auth-dialog">
     <div class="auth-tabs">
       <button id="tab-login" class="auth-tab active">Entrar</button>
       <button id="tab-register" class="auth-tab">Cadastrar</button>
     </div>
-    <div class="auth-forms">
 
+    <div class="auth-forms">
       <!-- LOGIN -->
-      <form id="form-login" class="auth-form">
+      <form id="form-login" class="auth-form is-active">
         <label>E-mail<input type="email" required></label>
         <label>Senha<input type="password" required></label>
         <button type="submit" class="auth-btn-primary">Entrar</button>
       </form>
 
       <!-- CADASTRO -->
-      <form id="form-register" class="auth-form" style="display:none;">
+      <form id="form-register" class="auth-form">
         <label>Nome<input type="text" required></label>
         <label>E-mail<input type="email" required></label>
         <label>Senha<input type="password" required></label>
@@ -648,7 +651,6 @@
         <label>Endereço<input type="text" required></label>
         <button type="submit" class="auth-btn-primary">Criar conta</button>
       </form>
-
     </div>
   </div>
 </div>
@@ -657,16 +659,6 @@
 
 
 
-<!-- Inicio Footer Section  -->
-    <!-- <section class="footer">
-        <div class="share">
-            <a href="#" class="fab fa-facebook-f"></a>
-            <a href="#" class="fab fa-instagram"></a>
-            <a href="#" class="fab fa-linkedin"></a>
-        </div>
-        <div class="credit">Velko Compressores Ltda <span>| all rights reserved</span> </div>
-    </section> -->
-<!-- Final Footer Section  -->
 
 
 <!-- Inicio Footer Section  -->
@@ -704,11 +696,11 @@
         <div class='footer-box'>
             <h3>Como chegar</h3>
             <a class='map-link' href='https://maps.app.goo.gl/1znJCakCgXFeUsH28' target='_blank'>
-                <img src='images/GoogleMaps.png' alt='Google Maps'>
+                <img src='assets/images/GoogleMaps.png' alt='Google Maps'>
                 Google Maps
             </a>
             <a class='map-link' href='https://ul.waze.com/ul?place=ChIJ0QuOgK19mQARjgpVdftWfpU&ll=-22.85542500%2C-43.24979360&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location' target='_blank'>
-                <img src='images/waze.png' alt='Waze'>
+                <img src='assets/images/waze.png' alt='Waze'>
                 Waze
             </a>
         </div>
@@ -718,15 +710,15 @@
             <h3>Redes sociais</h3>
             <div class='social-links'>
                 <a class='social-link' href='https://www.facebook.com/'>
-                    <img src='images/facebook-logo.png' alt='Facebook'>
+                    <img src='assets/images/facebook-logo.png' alt='Facebook'>
                     Facebook
                 </a>
                 <a class='social-link' href='https://www.instagram.com/velkocompressores/'>
-                    <img src='images/Instagram_icon.png' alt='Instagram'>
+                    <img src='assets/images/Instagram_icon.png' alt='Instagram'>
                     Instagram
                 </a>
                 <a class='social-link' href='https://www.linkedin.com/'>
-                    <img src='images/linkedin-icon.png' alt='LinkedIn'>
+                    <img src='assets/images/linkedin-icon.png' alt='LinkedIn'>
                     LinkedIn
                 </a>
             </div>
