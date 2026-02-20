@@ -1,0 +1,510 @@
+
+/* =========================
+   HEADING COMPLETO E RESPONSIVO
+========================= */
+.heading-section {
+  padding-top: 150px;
+  text-transform: uppercase;
+}
+
+.heading {
+    padding-left: 100px;
+    color:var(--cor-azul1);
+    font-size: 2rem;
+}
+
+.heading span {
+  color:var(--cor-azul2);
+}
+/* -- Final Heading Section  -- */
+
+
+/* =========================
+   COMPRESSOR-IMG COMPLETO E RESPONSIVO
+========================= */
+.svg-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#compressor-img {
+  max-width: 100%;
+  height: auto;
+}
+/* -- Final Compressor-img Section  -- */
+
+
+
+
+/* ============================================================
+   CLASS: .content  (section.table .content)
+   Função: painel lateral off‑canvas do carrinho
+============================================================ */
+section.table .content {
+  position: fixed !important;
+  top: var(--header-h, 90px);
+  right: 0;
+  width: 40%;
+  height: calc(100vh - var(--header-h, 80px));
+  background: var(--cart-bg);
+  color: var(--cart-fg);
+  backdrop-filter: saturate(120%) blur(6px);
+  overflow-y: auto;
+  padding: 45px 0 0 5px;
+  border-radius: 5px;
+  z-index: 900;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+
+/* Mostrar painel */
+section.table .content[style*="display: block"] {
+  transform: translateX(0);
+}
+
+/* ============================================================
+   CLASS: .cart-table
+   Função: tabela de itens do carrinho
+============================================================ */
+.cart-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: var(--cart-bg);
+  border: 1px solid var(--cart-border);
+  border-radius: var(--cart-radius-md);
+  box-shadow: var(--cart-shadow-sm);
+  overflow: hidden;
+}
+
+/* ===== Cabeçalho da tabela ===== */
+.cart-table thead {
+  background: var(--cor-azul1);
+}
+
+.cart-table thead th {
+  position: sticky;
+  top: 0;
+  background: var(--cor-azul1);
+  color: #ffffff;
+  text-align: left;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  font-size: 1.5rem;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--cor-azul1);
+  z-index: 2;
+}
+
+/* ===== Linhas da tabela ===== */
+.cart-table tbody tr {
+  transition: background-color .15s ease;
+}
+
+.cart-table tbody tr:nth-child(odd) {
+  background: var(--cart-row-zebra);
+}
+
+.cart-table tbody tr:hover {
+  background: var(--cart-row-hover);
+}
+
+/* ===== Células ===== */
+.cart-table td {
+  padding: 14px 16px;
+  vertical-align: middle;
+  border-bottom: 1px solid var(--cart-border);
+  color: var(--cart-fg);
+  font-size: 0.95rem;
+}
+
+.cart-table tbody tr td:first-child {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.cart-table tbody tr td:last-child {
+  text-align: right;
+}
+
+/* ===== Mensagem carrinho vazio ===== */
+.cart-table tbody tr td[colspan="3"] {
+  text-align: center;
+  font-weight: 500;
+  color: var(--cart-fg-muted);
+  padding: 24px 16px;
+}
+
+/* ============================================================
+   SUB-FUNÇÃO: controles & botões dentro da tabela
+============================================================ */
+.cart-table td [style*="inline-flex"] {
+  gap: 10px !important;
+}
+
+.cart-table button {
+  appearance: none;
+  border: 1px solid var(--cart-border-strong);
+  background: #ffffff;
+  color: var(--cart-fg);
+  border-radius: var(--cart-radius-sm);
+  padding: 8px 12px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 1px 0 rgba(0,0,0,.02);
+  line-height: 1;
+  transition: border-color .15s, background-color .15s, color .15s, transform .05s;
+}
+
+.cart-table button:hover {
+  background: #f8fafc;
+  border-color: var(--cart-border);
+}
+
+.cart-table button:active {
+  transform: translateY(1px);
+}
+
+.cart-table button:focus-visible {
+  outline: 2px solid rgba(37, 99, 235, 0.55);
+  outline-offset: 2px;
+}
+
+/* Botões + e - */
+.cart-table button:where(:first-child),
+.cart-table button:where(:nth-child(3)) {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+}
+
+/* Remover item */
+.cart-table button:nth-last-child(1) {
+  background: #fff0f2;
+  color: var(--cart-danger);
+  border-color: #fecdd3;
+}
+
+.cart-table button:nth-last-child(1):hover {
+  background: #ffe4e8;
+  border-color: #fda4af;
+}
+
+.cart-table button:nth-last-child(1):active {
+  background: #fed7df;
+}
+
+/* Animação ao adicionar */
+.add-product.adding {
+  animation: cart-bump .25s ease;
+}
+
+@keyframes cart-bump {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.06); }
+  100% { transform: scale(1); }
+}
+
+/* ============================================================
+   SUB-FUNÇÃO: inputs numéricos
+============================================================ */
+.cart-table input[type="number"] {
+  width: 72px;
+  height: 36px;
+  padding: 6px 8px;
+  border: 1px solid var(--cart-border-strong);
+  border-radius: var(--cart-radius-sm);
+  background: #ffffff;
+  color: var(--cart-fg);
+  font-weight: 600;
+  text-align: center;
+}
+
+.cart-table input[type="number"]::-webkit-outer-spin-button,
+.cart-table input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+/* ============================================================
+   SUB-FUNÇÃO: imagens da tabela
+============================================================ */
+.cart-table td[data-label="Imagem"] {
+  width: 110px;
+  min-width: 110px;
+  text-align: right;
+}
+
+.cart-table td[data-label="Imagem"] img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #f8fafc;
+  border: 1px solid var(--cart-border);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,.04);
+  transition: transform .15s, box-shadow .15s, border-color .15s;
+}
+
+.cart-table td[data-label="Imagem"] img:hover {
+  transform: scale(1.02);
+  border-color: var(--cart-border-strong);
+  box-shadow: 0 2px 6px rgba(0,0,0,.06);
+}
+
+/* ============================================================
+   ID: #purchaseButton (Botão primário)
+   Função: Finalizar compra
+============================================================ */
+#purchaseButton.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-radius: var(--cart-radius-md);
+  border: 1px solid transparent;
+  background: var(--cor-azul1);
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+
+  margin: 0 !important; /* corrigir alinhamento */
+}
+
+#purchaseButton.btn:hover {
+  background: var(--cor-azul2);
+}
+
+/* ============================================================
+   ID: #continueShoppingButton (Botão secundário)
+   Função: Continuar comprando
+============================================================ */
+#continueShoppingButton.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-radius: var(--cart-radius-md);
+  border: 1px solid var(--cor-azul2);
+  background: #ffffff;
+  color: var(--cor-azul1);
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  box-shadow: var(--cart-shadow-sm);
+  transition: background-color .15s, color .15s, border-color .15s, transform .05s;
+  margin: 0 !important; /* corrigir alinhamento */
+}
+
+#continueShoppingButton.btn:hover {
+  background: #f8fafc;
+  color: var(--cor-azul3);
+  border-color: var(--cor-azul3);
+}
+
+#continueShoppingButton.btn:active {
+  transform: translateY(1px);
+}
+
+/* ============================================================
+   CLASS: .cart-actions
+   Função: contêiner dos botões
+============================================================ */
+.cart-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+
+
+@media (max-width: 1350px) {
+  .heading-section {
+    padding-top: 150px;
+    color: var(--cor-azul1);
+    text-transform: uppercase;
+  }
+
+  .heading {
+      padding-left: 100px;
+      color:var(--cor-azul1);
+      font-size: 1.7rem;
+  }
+
+  /* A section passa a empilhar os filhos em coluna */
+  section.table#table {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;     /* ocupa 100% por padrão */
+    gap: 16px;                /* espaço entre svg-wrapper e content (opcional) */
+  }
+
+  /* svg-wrapper ocupa a largura total no empilhamento */
+  section.table#table .svg-wrapper {
+    width: 100%;
+  }
+
+  /* content deixa de ser off-canvas fixo e entra no fluxo */
+  section.table#table .content {
+    position: static !important;   /* sai do fixed */
+    width: 100% !important;        /* ocupa toda a largura da section */
+    height: auto !important;       /* altura automática */
+    top: auto !important;
+    right: auto !important;
+    transform: none !important;    /* remove translateX(100%) / 0 */
+    transition: none;              /* evita animação lateral no mobile */
+    padding: 16px !important;      /* padding mais compacto (ajuste opcional) */
+    border-radius: var(--cart-radius-md);
+    box-shadow: var(--cart-shadow-sm);
+    z-index: auto;
+  }
+
+  /* Cabeçalho “grudento” pode ficar agressivo em telas menores; ajuste opcional */
+  .cart-table thead th {
+    position: sticky;
+    top: 0;
+  }
+}
+
+
+
+
+
+@media (max-width: 600px) {
+
+  .heading-section {
+    padding-top: 120px;
+    color: var(--cor-azul1);
+    text-transform: uppercase;
+  }
+
+  .heading {
+    padding-left: 10px;
+    color: var(--cor-azul1);
+    font-size: 1rem;
+  }
+
+  /* A section empilha os filhos em coluna no mobile */
+  section.table#table {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding: 0 8px;
+    overflow-x: hidden; /* evita scroll lateral */
+  }
+
+  /* svg-wrapper agora ocupa 100% da tela (fullscreen) */
+  section.table#table .svg-wrapper {
+    width: 100vw;
+    height: 100svh;   /* altura real segura no mobile */
+    height: 100vh;    /* fallback */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* tela cheia sem scroll lateral */
+  }
+
+  /* SVG ocupa 100% da área visível */
+  #compressor-img {
+    width: 100vw;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    object-fit: contain;
+  }
+
+  /* .content entra no fluxo e vira full-width */
+  section.table#table .content {
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    top: auto !important;
+    right: auto !important;
+    transform: none !important;
+    transition: none !important;
+    padding: 12px !important;
+    border-radius: var(--cart-radius-md);
+    box-shadow: var(--cart-shadow-sm);
+    z-index: auto;
+  }
+
+  /* ===== Tabela: ajustes para caber melhor no mobile ===== */
+
+  /* scroll horizontal apenas se necessário */
+  .cart-table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Células mais compactas */
+  .cart-table td {
+    padding: 10px 12px;
+    font-size: 0.92rem;
+  }
+
+  /* Cabeçalho fixo */
+  .cart-table thead th {
+    position: sticky;
+    top: 0;
+    font-size: 0.9rem;
+    padding: 10px 12px;
+  }
+
+  /* Coluna de imagem menor */
+  .cart-table td[data-label="Imagem"] {
+    width: 78px;
+    min-width: 78px;
+    text-align: right;
+  }
+
+  .cart-table td[data-label="Imagem"] img {
+    width: 60px;
+    height: 60px;
+    border-radius: 6px;
+  }
+
+  /* Inputs e botões mais compactos */
+  .cart-table input[type="number"] {
+    width: 66px;
+    height: 34px;
+    padding: 6px;
+    font-size: 0.95rem;
+  }
+
+  .cart-table button {
+    padding: 8px 10px;
+    font-size: 0.92rem;
+  }
+
+  .cart-table button:where(:first-child),
+  .cart-table button:where(:nth-child(3)) {
+    width: 34px;
+    height: 34px;
+    font-size: 16px;
+  }
+
+  /* ===== Ações do carrinho ===== */
+  .cart-actions {
+    gap: 8px;
+    padding: 12px 0 0;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #purchaseButton.btn,
+  #continueShoppingButton.btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+
+
