@@ -30,7 +30,7 @@ Cada categoria é organizada como um mini‑site autônomo, com suas próprias p
 │   │   └── c3-4fes-4fc.html
 │   │
 │   └── assets/
-│       ├── css/
+│       ├── css/                        ← Não será utilizado local, será utilizado arquivos globais
 │       │   ├── base.css
 │       │   ├── layout.css
 │       │   ├── components.css
@@ -38,27 +38,27 @@ Cada categoria é organizada como um mini‑site autônomo, com suas próprias p
 │       │
 │       ├── js/
 │       │   ├── addItem/
-│       │   │   ├── addItem-c3-4ces-4cc.js
-│       │   │   ├── addItem-c3-4des-4dc.js
-│       │   │   ├── addItem-c3-4ees-4ec.js
-│       │   │   └── addItem-c3-4fes-4fc.js
+│       │   │   ├── c3-4ces-4cc.js
+│       │   │   ├── c3-4des-4dc.js
+│       │   │   ├── c3-4ees-4ec.js
+│       │   │   └── c3-4fes-4fc.js
 │       │   │
 │       │   ├── auth/
 │       │   │   └── modaLogin.js
 │       │   │
 │       │   └── cart/                  ← MÓDULOS COMPARTILHADOS DO CARRINHO
-│       │       ├── cart.a11y.js
-│       │       ├── cart.api.js
-│       │       ├── cart.badge.js
-│       │       ├── cart.bindings.js
-│       │       ├── cart.catalog.js
-│       │       ├── cart.config.js
-│       │       ├── cart.main.js
-│       │       ├── cart.ops.js
-│       │       ├── cart.render.js
-│       │       ├── cart.sku.js
-│       │       ├── cart.store.js
-│       │       └── cart.ui.js
+│       │       ├── a11y.js
+│       │       ├── api.js
+│       │       ├── badge.js
+│       │       ├── bindings.js
+│       │       ├── catalog.js
+│       │       ├── config.js
+│       │       ├── main.js
+│       │       ├── ops.js
+│       │       ├── render.js
+│       │       ├── sku.js
+│       │       ├── store.js
+│       │       └── ui.js
 │       │
 │       └── img/
 │           ├── pecas-c3-4ces-4cc/
